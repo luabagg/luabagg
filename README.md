@@ -23,7 +23,7 @@
 <br><br>
 
 <div align="right">
-<a href="linkedin.com/in/luabagg"><img height="18px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />&nbsp;Find me on LinkedIn!&nbsp;</a>
+<a href="https://www.linkedin.com/in/luabagg" target="_blank"><img height="18px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />&nbsp;Find me on LinkedIn!&nbsp;</a>
 </div>
 
 <hr><br>
