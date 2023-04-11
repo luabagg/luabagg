@@ -42,8 +42,8 @@
             }
             </style>
             <div id="cf">
-                <img class="bottom" src="https://github.com/luabagg/luabagg/blob/main/images/luabagg.jpg?raw=true" />
-                <img class="top" src="https://github.com/luabagg/luabagg/blob/8eb2f8b2322e82e091850f42e3b4c1449f8a6c43/images/cat.jpg?raw=true" />
+                <img class="bottom" src="./luabagg.jpg" />
+                <img class="top" src="./cat.jpg" />
             </div>
         </div>
     </foreignObject>
