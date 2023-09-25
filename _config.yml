@@ -1,5 +1,6 @@
 remote_theme: pages-themes/cayman@v0.2.0
-title: [luabagg's Porftolio]
-description: [👨‍💻 This is my portfolio]
+title: [luabagg's porftolio]
+description: [👨‍💻 this is my portfolio website! Feel free to explore.]
 plugins:
 - jekyll-remote-theme
+- jekyll-seo-tag
