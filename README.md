@@ -44,18 +44,18 @@
 
 <div>
     <h2>GitHub Stats and Projects 📌</h2>
-    <img height="143px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luabagg&hide=html&layout=compact&theme=cobalt" alt="luabagg stats"/>
-    &emsp;
+    <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luabagg&hide=html&layout=compact&theme=cobalt" alt="luabagg stats"/>
+    &nbsp;
     <a href="https://github.com/luabagg/orcgen" target="_blank">
-        <img height="143px" width="380px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=orcgen&theme=cobalt" alt="orcgen repo"/>
+        <img height="150px" width="400px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=orcgen&theme=cobalt" alt="orcgen repo"/>
     </a>
-    &emsp;
+    &nbsp;
     <a href="https://github.com/luabagg/containerized-keycloak" target="_blank">
-        <img height="143px" width="320px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=containerized-keycloak&theme=cobalt" alt="containerized-keycloak repo"/>
+        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=containerized-keycloak&theme=cobalt" alt="containerized-keycloak repo"/>
     </a>
-    &emsp;
+    &nbsp;
     <a href="https://github.com/luabagg/data-structures-and-algorithms" target="_blank">
-        <img height="143px" width="320px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=data-structures-and-algorithms&theme=cobalt" alt="data-structures-and-algorithms repo"/>
+        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=data-structures-and-algorithms&theme=cobalt" alt="data-structures-and-algorithms repo"/>
     </a>
 </div>
 
