@@ -24,7 +24,7 @@
             <a href="https://www.bling.com.br/" alt="Bling logo">&nbsp;<strong>Bling</strong></a> • Full-time • +3y
         </div>
         <br/>
-        <p>Acting mainly as a backend developer, I have created efficient and reliable APIs and microservices, and helped optimizing the codebase. I have used many technologies, including Go programming language, Kafka, AWS S3 and AWS OpenSearch. In addition, I helped in the orientation and integration of new coworkers, introducing them to our tech stack  and supporting any possible questions.</p>
+        <p>Acting mainly as a backend developer, I created efficient and reliable APIs and microservices, and helped optimizing the codebase. I have used many technologies, including Go programming language, Kafka, AWS S3 and AWS OpenSearch. In addition, I helped in the orientation and integration of new coworkers, introducing them to our tech stack  and supporting any possible questions.</p>
     </div>
 </div>
 
