@@ -5,7 +5,7 @@
 </a>
 
 <div align="left"> 
-    <p>Sometimes I try to do things and it just doesn't work out the way I wanted too.</p>
+    <p>Sometimes I try to do things and it just doesn't work out the way I wante it to.</p>
     <p><strong>I code</strong>:)</p>
     <p>Best at backend development, I've used several technologies throughout my career, including Go, Python, Apache Kafka, AWS S3, Redis, Protocol Buffers and Relational Databases.</p>
     <p>Flexible and open-minded, I consider all suggestions or opinions when taking my technical decisions. When receiving feedbacks, I take the opportunity to improve. I really like solving problems that require logic and brainstorming (I'm not a robot!), and being involved in complex projects as well.</p>
@@ -18,13 +18,36 @@
     <br/>
     <div>
         <div>
-            <img src="./images/bling.svg" width="120px" height="46px" align="left" alt="bling"/>
-            <strong>&nbsp;Full Stack Developer</strong>
+            <img src="./images/bling.svg" width="120px" height="46px" align="left" alt="Bling logo"/>
+            &emsp;<strong>Full Stack Developer</strong>
             <br/>
-            <a href="https://www.bling.com.br/" alt="Bling logo">&nbsp;<strong>Bling</strong></a> • Full-time • +3y
+            &emsp;<a href="https://www.bling.com.br/"><strong>Bling</strong></a> • Full-time • 2020 - 2024
         </div>
         <br/>
         <p>Acting mainly as a backend developer, I created efficient and reliable APIs and microservices, and helped optimizing the codebase. I have used many technologies, including Go programming language, Kafka, AWS S3 and AWS OpenSearch. In addition, I helped in the orientation and integration of new coworkers, introducing them to our tech stack  and supporting any possible questions.</p>
+    </div>
+    <br/>
+    <div>
+        <div>
+            <img src="./images/thermal-aquecimento.png" width="120px" height="55px" align="left" alt="Thermal Aquecimento logo"/>
+            &emsp;<strong>Web Developer</strong>
+            <br/>
+            &emsp;<a href="https://thermalaquecimento.com.br/"><strong>Thermal Aquecimento</strong></a> • Co-Founder • 2022 - now
+        </div>
+        <br/>
+        <p>At Thermal Aquecimento, the social media management is my responsibility. I created the company website and I also manage social networks and contracts / budget quotations.
+        I have the project publicly available. You can check it at the <a href="https://github.com/thermalaquecimento" alt="Organization link">organization's GitHub</a>.</p>
+    </div>
+    <br/>
+    <div>
+        <div>
+            <img src="./images/gearpoint.svg" width="80px" height="80px" align="left" alt="Gearpoint logo"/>
+            &emsp;<strong>Full Cycle Developer</strong>
+            <br/>
+            &emsp;<a href="https://gearpoint.com.br/"><strong>Gearpoint</strong></a> • Co-Founder • 2023 - now
+        </div>
+        <br/> <br/>
+        <p>Gearpoint is a complete platform for cars enthusiasts. It's still under development, so stay tuned following our <a href="https://instagram.com/gearpoint.br">social media</a> , and you can also check the <a href="https://github.com/gearpoint" alt="Organization link">organization's GitHub</a>.</p>
     </div>
 </div>
 

@@ -6,3 +6,4 @@ Now you got to see some top tier images:
 - [JS Nightmare](./js-nightmare.jpg)
 - [Real Job](./real-job.jpg)
 - [TempleOS](./templeos.jpg)
+- [School](./school.jpg)
