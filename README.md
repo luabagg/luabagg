@@ -19,22 +19,20 @@
     <div>
         <div>
             <img src="./images/bling.svg" width="120px" height="46px" align="left" alt="Bling logo"/>
-            &emsp;<strong>Full Stack Developer</strong>
+            &nbsp;<strong>Full Stack Developer</strong>
             <br/>
-            &emsp;<a href="https://www.bling.com.br/"><strong>Bling</strong></a> • Full-time • 2020 - 2024
+            &nbsp;<a href="https://www.bling.com.br/"><strong>Bling</strong></a> • Full-time • 2020 - 2024
         </div>
-        <br/>
         <p>Acting mainly as a backend developer, I created efficient and reliable APIs and microservices, and helped optimizing the codebase. I have used many technologies, including Go programming language, Kafka, AWS S3 and AWS OpenSearch. In addition, I helped in the orientation and integration of new coworkers, introducing them to our tech stack  and supporting any possible questions.</p>
     </div>
     <br/>
     <div>
         <div>
             <img src="./images/thermal-aquecimento.png" width="120px" height="55px" align="left" alt="Thermal Aquecimento logo"/>
-            &emsp;<strong>Web Developer</strong>
+            &nbsp;<strong>Web Developer</strong>
             <br/>
-            &emsp;<a href="https://thermalaquecimento.com.br/"><strong>Thermal Aquecimento</strong></a> • Co-Founder • 2022 - now
+            &nbsp;<a href="https://thermalaquecimento.com.br/"><strong>Thermal Aquecimento</strong></a> • Co-Founder • 2022 - now
         </div>
-        <br/>
         <p>At Thermal Aquecimento, the social media management is my responsibility. I created the company website and I also manage social networks and contracts / budget quotations.
         I have the project publicly available. You can check it at the <a href="https://github.com/thermalaquecimento" alt="Organization link">organization's GitHub</a>.</p>
     </div>
@@ -42,11 +40,11 @@
     <div>
         <div>
             <img src="./images/gearpoint.svg" width="80px" height="80px" align="left" alt="Gearpoint logo"/>
-            &emsp;<strong>Full Cycle Developer</strong>
+            &nbsp;<strong>Full Cycle Developer</strong>
             <br/>
-            &emsp;<a href="https://gearpoint.com.br/"><strong>Gearpoint</strong></a> • Co-Founder • 2023 - now
+            &nbsp;<a href="https://gearpoint.com.br/"><strong>Gearpoint</strong></a> • Co-Founder • 2023 - now
         </div>
-        <br/> <br/>
+        <br/>
         <p>Gearpoint is a complete platform for cars enthusiasts. It's still under development, so stay tuned following our <a href="https://instagram.com/gearpoint.br">social media</a> , and you can also check the <a href="https://github.com/gearpoint" alt="Organization link">organization's GitHub</a>.</p>
     </div>
 </div>
