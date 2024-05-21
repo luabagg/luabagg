@@ -33,7 +33,7 @@
             <br/>
             &nbsp;<a href="https://thermalaquecimento.com.br/"><strong>Thermal Aquecimento</strong></a> • Co-Founder • 2022 - now
         </div>
-        <p>At Thermal Aquecimento, the social media management is my responsibility. I created the company website and I also manage social networks and contracts / budget quotations.
+        <p>At Thermal Aquecimento, I'm in charge of the technology. I created the company website and managed social media and contracts / budget quotations.
         I have the project publicly available. You can check it at the <a href="https://github.com/thermalaquecimento" alt="Organization link">organization's GitHub</a>.</p>
     </div>
     <br/>
