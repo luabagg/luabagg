@@ -45,7 +45,7 @@
             &nbsp;<a href="https://gearpoint.com.br/"><strong>Gearpoint</strong></a> • Co-Founder • 2023 - now
         </div>
         <br/>
-        <p>Gearpoint is a complete platform for cars enthusiasts. It's still under development, so stay tuned following our <a href="https://instagram.com/gearpoint.br">social media</a> , and you can also check the <a href="https://github.com/gearpoint" alt="Organization link">organization's GitHub</a>.</p>
+        <p>Gearpoint is a complete platform for cars enthusiasts. It's still under development, so stay tuned following our <a href="https://instagram.com/gearpoint.br">social media</a>, and you can also check the <a href="https://github.com/gearpoint" alt="Organization link">organization's GitHub</a>.</p>
     </div>
 </div>
 
@@ -67,16 +67,24 @@
     <h2>GitHub Stats and Projects 📌</h2>
     <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luabagg&hide=html&layout=compact&theme=cobalt" alt="luabagg stats"/>
     &nbsp;
-    <a href="https://github.com/luabagg/orcgen" target="_blank">
-        <img height="150px" width="400px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=orcgen&theme=cobalt" alt="orcgen repo"/>
-    </a>
-    &nbsp;
     <a href="https://github.com/luabagg/containerized-keycloak" target="_blank">
         <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=containerized-keycloak&theme=cobalt" alt="containerized-keycloak repo"/>
     </a>
     &nbsp;
+    <a href="https://github.com/gearpoint/filepoint" target="_blank">
+        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=gearpoint&repo=filepoint&theme=cobalt" alt="filepoint repo"/>
+    </a>
+    &nbsp;
+    <a href="https://github.com/luabagg/orcgen" target="_blank">
+        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=orcgen&theme=cobalt" alt="orcgen repo"/>
+    </a>
+    &nbsp;
     <a href="https://github.com/luabagg/data-structures-and-algorithms" target="_blank">
         <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=data-structures-and-algorithms&theme=cobalt" alt="data-structures-and-algorithms repo"/>
+    </a>
+    &nbsp;
+    <a href="https://github.com/luabagg/factorial-bogosort" target="_blank">
+        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=factorial-bogosort&theme=cobalt" alt="factorial-bogosort repo"/>
     </a>
 </div>
 
