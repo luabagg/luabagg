@@ -7,4 +7,4 @@ Now you got to see some top tier images:
 - [Real Job](./real-job.jpg)
 - [TempleOS](./templeos.jpg)
 - [School](./school.jpg)
-- [Wobbly Mirror](./wobbly_mirror.gif.gif)
+- [Wobbly Mirror](./wobbly_mirror.gif)

@@ -5,7 +5,7 @@
 </a>
 
 <div align="left"> 
-    <p>Sometimes I try to do things and it just doesn't work out the way I wante it to.</p>
+    <p>Sometimes I try to do things and it just doesn't work out the way I want it to.</p>
     <p><strong>I code</strong>:)</p>
     <p>Best at backend development, I've used several technologies throughout my career, including Go, Python, Apache Kafka, AWS S3, Redis, Protocol Buffers and Relational Databases.</p>
     <p>Flexible and open-minded, I consider all suggestions or opinions when taking my technical decisions. When receiving feedbacks, I take the opportunity to improve. I really like solving problems that require logic and brainstorming (I'm not a robot!), and being involved in complex projects as well.</p>
@@ -42,10 +42,10 @@
             <img src="./images/gearpoint.svg" width="80px" height="80px" align="left" alt="Gearpoint logo"/>
             &nbsp;<strong>Full Cycle Developer</strong>
             <br/>
-            &nbsp;<a href="https://gearpoint.com.br/"><strong>Gearpoint</strong></a> • Co-Founder • 2023 - now
+            &nbsp;<a href="https://instagram.com/gearpoint.br"><strong>Gearpoint</strong></a> • Co-Founder • 2023 - now
         </div>
         <br/>
-        <p>Gearpoint is a complete platform for cars enthusiasts. It's still under development, so stay tuned following our <a href="https://instagram.com/gearpoint.br">social media</a>, and you can also check the <a href="https://github.com/gearpoint" alt="Organization link">organization's GitHub</a>.</p>
+        <p>Gearpoint is a complete platform and social media for cars enthusiasts. I led the complete development of the system architecture and the technologies used. I’ve used many tools in the development, including AWS S3, AWS SQS, Stripe, Django Ninja, Postgres, Redis, Terraform, etc. It's still under development, so stay tuned following our <a href="https://instagram.com/gearpoint.br">social media</a>, and you can also check the <a href="https://github.com/gearpoint" alt="Organization link">organization's GitHub</a>.</p>
     </div>
 </div>
 
