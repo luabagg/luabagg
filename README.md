@@ -14,8 +14,8 @@
 <hr/>
 
 <div>
-    <p style="font-size:1.5em;">Work experience 🚀</p>
-    <hr/><br/>
+    <h2>Work experience 🚀</h2>
+    <br/>
     <div>
         <div>
             <img src="./images/bling.svg" width="120px" height="46px" align="left" alt="Bling logo"/>
