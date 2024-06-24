@@ -1,6 +1,6 @@
 <h1>Hi there! 😼 this is luabagg.</h1>
 
-<a href="./images/" target="_blank">
+<a href="./images" target="_blank">
     <img src="./images/luabagg.jpg" width="40%" align="right" alt="luabagg"/>
 </a>
 
