@@ -1,5 +1,7 @@
 # WOAH! You just entered the secret room...
 
+<a href="./" style="float:right;">Go back</a>
+
 Now you got to see some top tier images:
 
 - [Cat](./cat.jpg)
