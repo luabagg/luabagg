@@ -1,7 +1,7 @@
 <h1>Hi there! 😼 this is luabagg.</h1>
 
 <a href="./images" target="_blank">
-    <img src="./images/luabagg.jpg" width="40%" align="right" alt="luabagg"/>
+    <img src="./images/luabagg.jpg" width="33%" align="right" alt="luabagg"/>
 </a>
 
 <div align="left"> 
