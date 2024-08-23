@@ -1,7 +1,7 @@
 <h1>Hi there! 😼 this is luabagg.</h1>
 
 <a href="./images" target="_blank">
-    <img src="./images/luabagg.jpg" width="33%" align="right" alt="luabagg"/>
+    <img src="./images/luabagg.jpg" width="28%" align="right" alt="luabagg"/>
 </a>
 
 <div align="left"> 
@@ -10,7 +10,7 @@
     <p>Specializing in backend development, I have experience with a wide range of technologies, including Go, Python, Apache Kafka, AWS S3, Redis, Protocol Buffers, and Relational Databases. Throughout my career, I've worked on various aspects of systems design, including API design, storage solutions, messaging queues, and more.</p>
 </div>
 
-<hr/>
+<br/><br/><hr/>
 
 <div>
     <h2>Work experience 🚀</h2>
