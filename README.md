@@ -7,8 +7,8 @@
 <div align="left"> 
     <p>Sometimes I try to do things and it just doesn't work out the way I want it to.</p>
     <p><strong>I code</strong>:)</p>
-    <p>Best at backend development, I've used several technologies throughout my career, including Go, Python, Apache Kafka, AWS S3, Redis, Protocol Buffers and Relational Databases.</p>
-    <p>Flexible and open-minded, I consider all suggestions or opinions when taking my technical decisions. When receiving feedbacks, I take the opportunity to improve. I really like solving problems that require logic and brainstorming (I'm not a robot!), and being involved in complex projects as well.</p>
+    <p>I’m a developer passionate about solving problems that have a meaningful impact on society. Specializing in backend development, I have experience with a wide range of technologies, including Go, Python, Apache Kafka, AWS S3, Redis, Protocol Buffers, and Relational Databases. Throughout my career, I've worked on various aspects of systems design, including API design, storage solutions, messaging queues, and more.</p>
+    <p>I'm communicative, collaborative, and committed to delivering high-quality solutions. I approach my work with leadership and a proactive attitude, and new challenges are what motivate me the most. I thrive in team environments, enjoy sharing knowledge, and am dedicated to continuous learning to enhance my skills and contribute effectively to the success of any project.</p>
 </div>
 
 <hr/>
@@ -33,7 +33,7 @@
             <br/>
             &nbsp;<a href="https://thermalaquecimento.com.br/"><strong>Thermal Aquecimento</strong></a> • Co-Founder • 2022 - now
         </div>
-        <p>At Thermal Aquecimento, I'm in charge of the technology. I created the company website and managed social media and contracts / budget quotations.
+        <p>At Thermal Aquecimento, I'm in charge of the technology. I created the company website and managed social media and contracts / quotes.
         I have the project publicly available. You can check it at the <a href="https://github.com/thermalaquecimento" alt="Organization link">organization's GitHub</a>.</p>
     </div>
     <br/>
@@ -67,24 +67,16 @@
     <h2>GitHub Stats and Projects 📌</h2>
     <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luabagg&hide=html&layout=compact&theme=cobalt" alt="luabagg stats"/>
     &nbsp;
-    <a href="https://github.com/luabagg/containerized-keycloak" target="_blank">
-        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=containerized-keycloak&theme=cobalt" alt="containerized-keycloak repo"/>
+    <a href="https://github.com/luabagg/orcgen" target="_blank">
+        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=orcgen&theme=cobalt" alt="orcgen repo"/>
     </a>
     &nbsp;
     <a href="https://github.com/gearpoint/filepoint" target="_blank">
         <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=gearpoint&repo=filepoint&theme=cobalt" alt="filepoint repo"/>
     </a>
     &nbsp;
-    <a href="https://github.com/luabagg/orcgen" target="_blank">
-        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=orcgen&theme=cobalt" alt="orcgen repo"/>
-    </a>
-    &nbsp;
-    <a href="https://github.com/luabagg/data-structures-and-algorithms" target="_blank">
-        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=data-structures-and-algorithms&theme=cobalt" alt="data-structures-and-algorithms repo"/>
-    </a>
-    &nbsp;
-    <a href="https://github.com/luabagg/factorial-bogosort" target="_blank">
-        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=factorial-bogosort&theme=cobalt" alt="factorial-bogosort repo"/>
+    <a href="https://github.com/luabagg/worldwide-trends" target="_blank">
+        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=worldwide-trends&theme=cobalt" alt="worldwide-trends repo"/>
     </a>
 </div>
 
