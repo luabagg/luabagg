@@ -5,10 +5,9 @@
 </a>
 
 <div align="left"> 
-    <p>Sometimes I try to do things and it just doesn't work out the way I want it to.</p>
     <p><strong>I code</strong>:)</p>
-    <p>I’m a developer passionate about solving problems that have a meaningful impact on society. Specializing in backend development, I have experience with a wide range of technologies, including Go, Python, Apache Kafka, AWS S3, Redis, Protocol Buffers, and Relational Databases. Throughout my career, I've worked on various aspects of systems design, including API design, storage solutions, messaging queues, and more.</p>
-    <p>I'm communicative, collaborative, and committed to delivering high-quality solutions. I approach my work with leadership and a proactive attitude, and new challenges are what motivate me the most. I thrive in team environments, enjoy sharing knowledge, and am dedicated to continuous learning to enhance my skills and contribute effectively to the success of any project.</p>
+    <p>I’m a developer passionate about solving problems that have a meaningful impact on society.</p>
+    <p>Specializing in backend development, I have experience with a wide range of technologies, including Go, Python, Apache Kafka, AWS S3, Redis, Protocol Buffers, and Relational Databases. Throughout my career, I've worked on various aspects of systems design, including API design, storage solutions, messaging queues, and more.</p>
 </div>
 
 <hr/>
