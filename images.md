@@ -4,9 +4,9 @@
 
 Now you got to see some top tier images:
 
-- [Cat](./cat.jpg)
-- [JS Nightmare](./js-nightmare.jpg)
-- [Real Job](./real-job.jpg)
-- [TempleOS](./templeos.jpg)
-- [School](./school.jpg)
-- [Wobbly Mirror](./wobbly_mirror.gif)
+- [Cat](./images/cat.jpg)
+- [JS Nightmare](./images/js-nightmare.jpg)
+- [Real Job](./images/real-job.jpg)
+- [TempleOS](./images/templeos.jpg)
+- [School](./images/school.jpg)
+- [Wobbly Mirror](./images/wobbly_mirror.gif)
