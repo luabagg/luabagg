@@ -6,50 +6,11 @@
 
 <div align="left">
     <p><strong>I code</strong>:)</p>
-    <p>I’m a developer who really loves solving problems that  have an impact on society.</p>
-    <p>Specializing in backend development, I'm passionate about building great products. Throughout my career, I've worked on various aspects of systems design, including API design, storage solutions, messaging queues, stream processing, and more.</p>
+    <p>Specializing in backend development, I am passionate about building great products.
+Throughout my career, I have worked on various aspects of systems design, including API development, storage solutions, messaging queues, stream processing, and more.</p>
 </div>
 
 <br />
-<br />
-<hr />
-
-<div>
-    <h2>Work experience 🚀</h2>
-    <br />
-    <div>
-        <div>
-            <img src="./images/bling.svg" width="120px" height="46px" align="left" alt="Bling logo"/>
-            &nbsp;<strong>Full Stack Developer</strong>
-            <br />
-            &nbsp;<a href="https://www.bling.com.br/"><strong>Bling</strong></a> • Full-time • 2020 - 2024
-        </div>
-        <p>Acting mainly as a backend developer, I created efficient and reliable APIs and microservices, and helped optimize the codebase. I have used many technologies, including PHP, Go, JavaScript, MySQL, Kafka, AWS S3 and OpenSearch. In addition, I helped in the orientation and integration of new coworkers, introducing them to our tech stack and supporting any possible questions.</p>
-    </div>
-    <br />
-    <div>
-        <div>
-            <img src="./images/thermal-aquecimento.png" width="120px" height="55px" align="left" alt="Thermal Aquecimento logo"/>
-            &nbsp;<strong>Full Stack Developer</strong>
-            <br />
-            &nbsp;<a href="https://thermalaquecimento.com.br/"><strong>Thermal Aquecimento</strong></a> • Co-Founder • 2022 - now
-        </div>
-        <p>At Thermal Aquecimento, I'm in charge of the technology. I created the company website and managed social media and contracts / quotes. I have the project publicly available, and it can be checked at the <a href="https://github.com/luabagg/thermalaquec" alt="Github link">GitHub repository</a>.</p>
-    </div>
-    <br />
-    <div>
-        <div>
-            <img src="./images/gearpoint.svg" width="80px" height="80px" align="left" alt="Gearpoint logo"/>
-            &nbsp;<strong>Backend Developer</strong>
-            <br />
-            &nbsp;<a href="https://instagram.com/gearpoint.br"><strong>Gearpoint</strong></a> • Co-Founder • 2023 - now
-        </div>
-        <br />
-        <p>I led the complete development of the system architecture and the technologies used. I’ve used many tools in the development, including Python, AWS S3, SQS, Stripe, Django Ninja, Postgres, Redis, Terraform, etc. It's still under development, so stay tuned following our <a href="https://instagram.com/gearpoint.br">social media</a>, and you can also check the <a href="https://github.com/gearpoint" alt="Organization link">organization's GitHub</a>.</p>
-    </div>
-</div>
-
-<br /><br />
 
 <div align="right">
     <b>Find me elsewhere!</b>
@@ -61,7 +22,7 @@
     </a>
 </div>
 
-<hr />
+<br />
 
 <div>
     <h2>GitHub Stats and Projects 📌</h2>
