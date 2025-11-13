@@ -6,8 +6,8 @@
 
 <div align="left">
     <p><strong>I code</strong>:)</p>
-    <p>Specializing in backend development, I am passionate about building great products.
-Throughout my career, I have worked on various aspects of systems design, including API development, storage solutions, messaging queues, stream processing, and more.</p>
+    <p>I have over 5 years of experience in healthcare, ERP, and SaaS, building APIs, data storage solutions, distributed systems, and messaging platforms with Python, TypeScript, Go, SQL, and cloud technologies (AWS, GCP).</p>
+    <p>I enjoy sharing what I learn, making the code better than it was, and collaborating with people who care about the software they're building.</p>
 </div>
 
 <div>
