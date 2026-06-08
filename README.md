@@ -1,53 +1,46 @@
-<h1>Hi there! 😼 this is luabagg.</h1>
+<h1 align="center">Luan Baggio</h1>
 
-<a href="./images" target="_blank">
-    <img src="./images/luabagg.jpg" width="28%" align="right" alt="luabagg"/>
-</a>
+<p align="center">
+  Software engineer building production systems across healthcare, ERP, and SaaS.
+</p>
 
-<div align="left">
-    <p><strong>I code</strong>:)</p>
-    <p>I have over 5 years of experience in healthcare, ERP, and SaaS, building APIs, data storage solutions, distributed systems, and messaging platforms with Python, TypeScript, Go, SQL, and cloud technologies (AWS, GCP).</p>
-    <p>I enjoy sharing what I learn, making the code better than it was, and collaborating with people who care about the software they're building.</p>
-</div>
+<p align="center">
+  <a href="https://linkedin.com/in/luabagg">LinkedIn</a> ·
+  <a href="https://github.com/luabagg">GitHub</a> ·
+  <a href="https://luabagg.github.io/luabagg">Portfolio</a>
+</p>
 
-<div>
-    <img height="26px" src="https://img.shields.io/badge/Python-4B8BBE?style=for-the-badge&logoColor=white"/>
-    <img height="26px" src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logoColor=white"/>
-    <img height="26px" src="https://img.shields.io/badge/TS-007ACC?style=for-the-badge&logoColor=black"/>
-    <img height="26px" src="https://img.shields.io/badge/JS-F7DF1E?style=for-the-badge&logoColor=black"/>
-    <img height="26px" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logoColor=white"/>
-    <img height="26px" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logoColor=white"/>
-    <img height="26px" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logoColor=white"/>
-    <img height="26px" src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logoColor=white"/>
-</div>
+---
 
-<br><br><br><br>
+### Focus
 
-<div align="right">
-    <b>Find me elsewhere!</b>
-    <a href="https://www.linkedin.com/in/luabagg" target="_blank">
-        <img height="18px" src="https://img.shields.io/badge/Luan Baggio-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-    </a>
-    <a href="https://github.com/luabagg" target="_blank">
-        <img height="18px" src="https://img.shields.io/github/followers/luabagg?label=follow&style=social" alt="GitHub Badge"/>
-    </a>
-</div>
+Backend-heavy product engineering: APIs, async workflows, data imports, media
+services, observability, and production support. I care about software that is
+clear to operate and hard to accidentally break.
 
-<br>
+### Languages
 
-<div>
-    <h2>GitHub Stats and Projects 📌</h2>
-    <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luabagg&hide=html&layout=compact&theme=cobalt" alt="luabagg stats"/>
-    &nbsp;
-    <a href="https://github.com/luabagg/orcgen" target="_blank">
-        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=orcgen&theme=cobalt" alt="orcgen repo"/>
-    </a>
-    &nbsp;
-    <a href="https://github.com/gearpoint/filepoint" target="_blank">
-        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=gearpoint&repo=filepoint&theme=cobalt" alt="filepoint repo"/>
-    </a>
-    &nbsp;
-    <a href="https://github.com/luabagg/worldwide-trends" target="_blank">
-        <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=worldwide-trends&theme=cobalt" alt="worldwide-trends repo"/>
-    </a>
-</div>
+```text
+Primary        Python · Go · TypeScript · SQL · PHP
+Frontend       React · Vue · Next.js · Remix
+Backend        Django · FastAPI · Gin · gRPC · REST
+Data           PostgreSQL · MySQL · Redis · DynamoDB · OpenSearch · S3
+Operations     AWS · GCP · Terraform · Docker · Grafana · Sentry · PagerDuty
+```
+
+### Selected projects
+
+| Project | Notes |
+| --- | --- |
+| [Filepoint](https://github.com/gearpoint/filepoint) | Go/Gin media service for uploads, resizing, compression, and low-latency retrieval. |
+| [Orcgen](https://github.com/luabagg/orcgen) | CLI utility for repeatable project scaffolding. |
+| [Worldwide trends](https://github.com/luabagg/worldwide-trends) | Browser-based data visualization project. |
+
+### Experience
+
+| Period | Company | Work |
+| --- | --- | --- |
+| 2025-now | Athelas | Healthcare billing, eligibility, appointments, imports, observability. |
+| 2024 | Yo Lara | Local-first ERP workflows. |
+| 2023-2024 | Gearpoint | Social/events platform, media infrastructure, payments. |
+| 2020-2024 | Bling | ERP systems, Go/gRPC services, legacy PHP, storage migration. |
