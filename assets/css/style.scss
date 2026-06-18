@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -67,7 +68,7 @@ button:focus-visible {
   position: absolute;
   left: 1rem;
   top: -10rem;
-  z-index: 10;
+  z-index: 30;
   padding: 0.65rem 0.9rem;
   background: var(--text);
   color: var(--surface);
@@ -78,7 +79,6 @@ button:focus-visible {
   top: 1rem;
 }
 
-.site-header,
 .main-content,
 .site-footer {
   width: min(1120px, calc(100% - 2rem));
@@ -86,11 +86,23 @@ button:focus-visible {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 0.85rem 0;
+  background: rgba(248, 234, 208, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.35rem 0;
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
 }
 
 .site-mark {
@@ -858,7 +870,7 @@ h3 {
 }
 
 @media (max-width: 840px) {
-  .site-header,
+  .site-header-inner,
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
