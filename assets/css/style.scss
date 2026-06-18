@@ -12,7 +12,7 @@
   --accent-soft: #f2cc8f;
   --shadow: 0 24px 80px rgba(90, 18, 11, 0.14);
   --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: "MOHO Cond", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --font-display: "Saira Condensed", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
 }
 
@@ -164,12 +164,6 @@ button:focus-visible {
   margin: 0 0 1.5rem 2rem;
   border-radius: 1.4rem;
   box-shadow: var(--shadow);
-}
-
-@font-face {
-  font-family: "MOHO Cond";
-  src: local("MOHO Cond"), local("MOHO");
-  font-display: swap;
 }
 
 .readme-section div:has(img[src*="img.shields.io"]) {
