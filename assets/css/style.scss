@@ -192,6 +192,20 @@ button:focus-visible {
   border-radius: 0.85rem;
 }
 
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.stats-grid img[src*="github-readme-stats"] {
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+}
+
 .hero-copy {
   max-width: 48rem;
 }
