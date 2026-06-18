@@ -45,8 +45,8 @@
       ease: "none",
       scrollTrigger: {
         trigger: section,
-        start: "top 70%",
-        end: "bottom 30%",
+        start: "top 75%",
+        end: "bottom 75%",
         scrub: true,
       },
     });

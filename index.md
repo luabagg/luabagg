@@ -64,85 +64,97 @@ title: Luan Baggio - Software Engineer
   </div>
 
   <div class="experience-motion">
-    <svg class="experience-path" viewBox="0 0 1120 520" preserveAspectRatio="none" aria-hidden="true">
-      <path id="career-path" d="M40,440 C220,120 360,480 560,180 S800,80 1080,260" fill="none" stroke="rgba(140,28,19,0.14)" stroke-width="2" stroke-dasharray="8 8"/>
+    <svg class="experience-path" viewBox="0 0 20 1000" preserveAspectRatio="none" aria-hidden="true">
+      <path id="career-path" d="M10,0 C14,250 6,500 10,750 C14,875 6,940 10,1000" fill="none" stroke="rgba(140,28,19,0.18)" stroke-width="2" stroke-dasharray="8 8"/>
     </svg>
     <div class="experience-marker" aria-hidden="true"></div>
 
-    <div class="experience-grid">
-      <article class="experience-card experience-card-large">
-        <div class="experience-media">
-          <img src="./images/athelas.png" alt="Athelas product screenshot"/>
-        </div>
-        <div class="experience-body">
-          <div class="timeline-meta">
-            <span>2025 - now</span>
-            <span>Software Engineer</span>
+    <ol class="experience-timeline">
+      <li class="experience-entry">
+        <span class="experience-node" aria-hidden="true"></span>
+        <article class="experience-card">
+          <div class="experience-media">
+            <img src="./images/athelas.png" alt="Athelas product screenshot"/>
           </div>
-          <h3>Athelas</h3>
-          <p>
-            Healthcare automation platform. Shipped billing, eligibility, Charge
-            Master, appointment billing, async CSV imports up to ~50k rows, and
-            production support across Python, React/TypeScript, PostgreSQL, and
-            GCP.
-          </p>
-        </div>
-      </article>
+          <div class="experience-body">
+            <div class="timeline-meta">
+              <span>2025 — now</span>
+              <span>Software Engineer</span>
+            </div>
+            <h3>Athelas</h3>
+            <p>
+              Healthcare automation platform. Shipped billing, eligibility, Charge
+              Master, appointment billing, async CSV imports up to ~50k rows, and
+              production support across Python, React/TypeScript, PostgreSQL, and
+              GCP.
+            </p>
+          </div>
+        </article>
+      </li>
 
-      <article class="experience-card">
-        <div class="experience-body">
-          <div class="timeline-meta">
-            <span>2024</span>
-            <span>Software Engineer, contract</span>
+      <li class="experience-entry">
+        <span class="experience-node" aria-hidden="true"></span>
+        <article class="experience-card">
+          <div class="experience-logo">
+            <img src="./images/yo-lara.jpg" alt="Yo Lara logo"/>
           </div>
-          <h3>Yo Lara</h3>
-          <p>
-            Local-first ERP product flows, service-order workflows, and
-            centralized imports using React, React Aria, SQLite, PostgreSQL, and
-            PowerSync.
-          </p>
-        </div>
-        <div class="experience-logo">
-          <img src="./images/yo-lara.jpg" alt="Yo Lara logo"/>
-        </div>
-      </article>
+          <div class="experience-body">
+            <div class="timeline-meta">
+              <span>2024</span>
+              <span>Software Engineer, contract</span>
+            </div>
+            <h3>Yo Lara</h3>
+            <p>
+              Local-first ERP product flows, service-order workflows, and
+              centralized imports using React, React Aria, SQLite, PostgreSQL, and
+              PowerSync.
+            </p>
+          </div>
+        </article>
+      </li>
 
-      <article class="experience-card">
-        <div class="experience-logo">
-          <img src="./images/gearpoint.svg" alt="Gearpoint logo"/>
-        </div>
-        <div class="experience-body">
-          <div class="timeline-meta">
-            <span>2023 - 2024</span>
-            <span>Founding Engineer</span>
+      <li class="experience-entry">
+        <span class="experience-node" aria-hidden="true"></span>
+        <article class="experience-card">
+          <div class="experience-logo">
+            <img src="./images/gearpoint.svg" alt="Gearpoint logo"/>
           </div>
-          <h3>Gearpoint</h3>
-          <p>
-            Built a car enthusiast social/events platform from zero to 2,000+
-            beta users. Owned Django APIs, frontend flows, payments, media
-            infrastructure, and AWS deployment.
-          </p>
-        </div>
-      </article>
+          <div class="experience-body">
+            <div class="timeline-meta">
+              <span>2023 — 2024</span>
+              <span>Founding Engineer</span>
+            </div>
+            <h3>Gearpoint</h3>
+            <p>
+              Built a car enthusiast social/events platform from zero to 2,000+
+              beta users. Owned Django APIs, frontend flows, payments, media
+              infrastructure, and AWS deployment.
+            </p>
+          </div>
+        </article>
+      </li>
 
-      <article class="experience-card">
-        <div class="experience-logo">
-          <img src="./images/bling.svg" alt="Bling logo"/>
-        </div>
-        <div class="experience-body">
-          <div class="timeline-meta">
-            <span>2020 - 2024</span>
-            <span>Software Engineer</span>
+      <li class="experience-entry">
+        <span class="experience-node" aria-hidden="true"></span>
+        <article class="experience-card">
+          <div class="experience-logo">
+            <img src="./images/bling.svg" alt="Bling logo"/>
           </div>
-          <h3>Bling</h3>
-          <p>
-            One of Brazil’s leading ERP platforms. Helped introduce Go/gRPC
-            services, co-owned a file management service, migrated 40TB+ of
-            files, and contributed to API v3 architecture.
-          </p>
-        </div>
-      </article>
-    </div>
+          <div class="experience-body">
+            <div class="timeline-meta">
+              <span>2020 — 2024</span>
+              <span>Software Engineer</span>
+            </div>
+            <h3>Bling</h3>
+            <p>
+              One of Brazil’s leading ERP platforms. Helped introduce Go/gRPC
+              services, co-owned a file management service, migrated 40TB+ of
+              files, and contributed to API v3 architecture.
+            </p>
+          </div>
+        </article>
+      </li>
+    </ol>
   </div>
 </section>
 
