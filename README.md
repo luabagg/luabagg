@@ -48,7 +48,7 @@
 <div align="right">
     <b>Find me elsewhere!</b>
     <a href="https://www.linkedin.com/in/luabagg" target="_blank">
-        <img height="18px" src="https://img.shields.io/badge/Luan Baggio-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+        <img height="18px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
     </a>
     <a href="https://github.com/luabagg" target="_blank">
         <img height="18px" src="https://img.shields.io/github/followers/luabagg?label=follow&style=social" alt="GitHub Badge"/>

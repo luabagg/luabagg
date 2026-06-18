@@ -185,6 +185,10 @@ button:focus-visible {
   align-items: center;
 }
 
+.readme-section div:has(a[href*="linkedin"]) {
+  justify-content: flex-end;
+}
+
 .readme-section img[src*="github-readme-stats"] {
   max-width: 100%;
   height: auto;
