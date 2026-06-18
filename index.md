@@ -169,10 +169,11 @@ title: Luan Baggio - Software Engineer
   </div>
 
   <div class="ventures-grid">
-    <article class="venture-card venture-card-large venture-vivid">
+    <article class="venture-card venture-card-large venture-gheno">
       <span class="card-orb orb-a" aria-hidden="true"></span>
       <span class="card-orb orb-b" aria-hidden="true"></span>
       <span class="card-noise" aria-hidden="true"></span>
+      <span class="card-shimmer" aria-hidden="true"></span>
       <div class="venture-media">
         <img src="./images/gheno-rotors.png" alt="GHENO rotors"/>
       </div>
@@ -181,7 +182,6 @@ title: Luan Baggio - Software Engineer
           <span>DOWNHILL</span>
           <span>ENDURO</span>
           <span>E-BIKE</span>
-          <span>HEAT CONTROL</span>
         </div>
         <div class="venture-kicker">Side business · Brazilian MTB components</div>
         <h3>GHENO</h3>
