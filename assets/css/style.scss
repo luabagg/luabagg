@@ -269,7 +269,8 @@ h3 {
 .timeline p,
 .project-card p,
 .stack-groups p,
-.education-contact p {
+.education-section p,
+.contact-section p {
   max-width: 65ch;
   color: var(--muted);
 }
@@ -865,17 +866,71 @@ h3 {
   pointer-events: none;
 }
 
-.education-contact {
+.education-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.55fr);
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.education-card {
+  border: 1px solid rgba(221, 214, 200, 0.82);
+  border-radius: 1.5rem;
+  background: rgba(255, 253, 248, 0.72);
+  padding: 1.35rem;
+}
+
+.education-card-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.education-card-head h3 {
+  font-size: 1.8rem;
+}
+
+.education-tag {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+}
+
+.education-degree {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.education-badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.education-badges li {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .contact-block {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
-  padding: 1.25rem;
+  padding: 1.5rem;
   border: 1px solid var(--line);
   border-radius: 1.35rem;
   background: rgba(255, 253, 248, 0.72);
@@ -983,7 +1038,7 @@ h3 {
   .section-heading,
   .stack-layout,
   .ventures-grid,
-  .education-contact {
+  .education-grid {
     grid-template-columns: 1fr;
   }
 

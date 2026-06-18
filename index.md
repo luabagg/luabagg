@@ -212,15 +212,56 @@ title: Luan Baggio - Software Engineer
   </div>
 </section>
 
-<section class="section education-contact" id="contact">
-  <div>
+<section class="section education-section" id="education">
+  <div class="section-heading">
     <p class="eyebrow">Education</p>
     <h2>Statistics, data, and software foundations</h2>
     <p>
-      Universidade Federal de Santa Maria - Statistics and Data Science.
-      Instituto Federal do Rio Grande do Sul - Internet Computing.
+      Two programs that shaped how I think about systems, data, and the
+      trade-offs behind every decision.
     </p>
   </div>
+
+  <div class="education-grid">
+    <article class="education-card">
+      <div class="education-card-head">
+        <h3>UFSM</h3>
+        <span class="education-tag">Universidade Federal de Santa Maria</span>
+      </div>
+      <p class="education-degree">Statistics &amp; Data Science</p>
+      <ul class="education-badges">
+        <li>Statistics</li>
+        <li>Data Science</li>
+        <li>Probability</li>
+        <li>Statistical Modeling</li>
+      </ul>
+    </article>
+
+    <article class="education-card">
+      <div class="education-card-head">
+        <h3>IFRS</h3>
+        <span class="education-tag">Instituto Federal do Rio Grande do Sul</span>
+      </div>
+      <p class="education-degree">Internet Computing</p>
+      <ul class="education-badges">
+        <li>Web Development</li>
+        <li>Programming</li>
+        <li>Networking</li>
+        <li>Systems Analysis</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact">
+  <div class="section-heading">
+    <p class="eyebrow">Contact</p>
+    <h2>Let&rsquo;s talk</h2>
+    <p>
+      Reach out for work, collaboration, or just to say hi.
+    </p>
+  </div>
+
   <div class="contact-block">
     <a href="mailto:luanbaggio0@gmail.com">luanbaggio0@gmail.com</a>
     <a href="https://github.com/luabagg">github.com/luabagg</a>
