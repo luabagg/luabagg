@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f4f1ea">
+    <meta name="theme-color" content="#f2cc8f">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
@@ -19,8 +19,8 @@
       <a class="site-mark" href="{{ '/' | relative_url }}">Luan Baggio</a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#languages">Stack</a>
-        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#ventures">Work</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -33,5 +33,10 @@
       <span>Software engineer in Brazil.</span>
       <span>Built with Jekyll.</span>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js" defer></script>
+    <script src="{{ '/assets/js/interactions.js?v=' | append: site.github.build_revision | relative_url }}" defer></script>
   </body>
 </html>

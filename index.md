@@ -3,30 +3,11 @@ layout: default
 title: Luan Baggio - Software Engineer
 ---
 
-<section class="hero" id="intro">
-  <div class="hero-copy">
-    <p class="eyebrow">Software engineer / Brazil / Remote</p>
-    <h1>Production software for healthcare, ERP, and product teams.</h1>
-    <p class="hero-summary">
-      I build backend-heavy product systems with Python, Go, TypeScript, SQL,
-      and cloud infrastructure. Most of my work sits close to billing,
-      data imports, media services, observability, and APIs that need to stay
-      dependable under real usage.
-    </p>
-    <div class="hero-actions" aria-label="Primary links">
-      <a class="button primary" href="https://github.com/luabagg">GitHub</a>
-      <a class="button secondary" href="https://linkedin.com/in/luabagg">LinkedIn</a>
-    </div>
-  </div>
-
-  <aside class="profile-panel" aria-label="Profile snapshot">
-    <img class="profile-photo" src="./images/luabagg.jpg" alt="Portrait of Luan Baggio"/>
-    <div class="profile-meta">
-      <span>5+ years</span>
-      <span>Python / Go / TypeScript</span>
-      <span>AWS / GCP / PostgreSQL</span>
-    </div>
-  </aside>
+<section class="readme-section" id="intro" aria-label="Profile introduction">
+{% capture readme_content %}
+{% include_relative README.md %}
+{% endcapture %}
+{{ readme_content | markdownify }}
 </section>
 
 <section class="section stack-section" id="languages">
@@ -34,20 +15,20 @@ title: Luan Baggio - Software Engineer
     <p class="eyebrow">Languages and tools</p>
     <h2>Core stack</h2>
     <p>
-      A practical toolkit for product engineering: APIs, async jobs, data-heavy
-      workflows, and service operations.
+      The practical toolkit I reach for when building product systems: APIs,
+      async jobs, data-heavy workflows, and operational interfaces.
     </p>
   </div>
 
   <div class="stack-layout">
     <article class="stack-feature">
       <span class="stack-label">Primary languages</span>
-      <div class="language-list">
-        <span>Python</span>
-        <span>Go</span>
-        <span>TypeScript</span>
-        <span>SQL</span>
-        <span>PHP</span>
+      <div class="tech-dock" aria-label="Primary technologies">
+        <button type="button" class="tech-dock-item">Python</button>
+        <button type="button" class="tech-dock-item">Go</button>
+        <button type="button" class="tech-dock-item">TypeScript</button>
+        <button type="button" class="tech-dock-item">SQL</button>
+        <button type="button" class="tech-dock-item">PHP</button>
       </div>
     </article>
 
@@ -72,124 +53,148 @@ title: Luan Baggio - Software Engineer
   </div>
 </section>
 
-<section class="section projects-section" id="projects">
-  <div class="section-heading">
-    <p class="eyebrow">Selected projects</p>
-    <h2>Systems I want people to notice</h2>
-  </div>
-
-  <div class="project-grid">
-    <article class="project-card project-card-large">
-      <div>
-        <p class="project-kicker">Go / Gin / S3 / Redis / DynamoDB</p>
-        <h3>Filepoint</h3>
-        <p>
-          Media service for asynchronous uploads, image compression, resizing,
-          and low-latency retrieval. Built around S3, CloudFront, Redis,
-          DynamoDB, Rekognition, Watermill, and SQS.
-        </p>
-      </div>
-      <a href="https://github.com/gearpoint/filepoint">View repository</a>
-    </article>
-
-    <article class="project-card">
-      <div>
-        <p class="project-kicker">Go / CLI</p>
-        <h3>Orcgen</h3>
-        <p>
-          Code generation utility for scaffolding repeatable project structures
-          without rebuilding boilerplate by hand.
-        </p>
-      </div>
-      <a href="https://github.com/luabagg/orcgen">View repository</a>
-    </article>
-
-    <article class="project-card">
-      <div>
-        <p class="project-kicker">TypeScript / Web app</p>
-        <h3>Worldwide trends</h3>
-        <p>
-          Data visualization project for exploring global trend data and
-          statistical reporting in a browser.
-        </p>
-      </div>
-      <a href="https://github.com/luabagg/worldwide-trends">View repository</a>
-    </article>
-
-    <article class="project-card">
-      <div>
-        <p class="project-kicker">Python / Django / AWS</p>
-        <h3>Gearpoint platform</h3>
-        <p>
-          Social and events product for car enthusiasts, with profiles, event
-          flows, payments, media infrastructure, and beta usage at 2,000+ users.
-        </p>
-      </div>
-    </article>
-  </div>
-</section>
-
 <section class="section experience-section" id="experience">
   <div class="section-heading">
     <p class="eyebrow">Experience</p>
-    <h2>Short version</h2>
+    <h2>Where I’ve shipped real systems</h2>
+    <p>
+      Highlights from healthcare billing, local-first ERP, a car-enthusiast
+      platform, and one of Brazil’s largest ERP products.
+    </p>
   </div>
 
-  <div class="timeline">
-    <article>
-      <div class="timeline-meta">
-        <span>2025 - now</span>
-        <span>Athelas</span>
+  <div class="experience-motion">
+    <svg class="experience-path" viewBox="0 0 1120 520" preserveAspectRatio="none" aria-hidden="true">
+      <path id="career-path" d="M40,440 C220,120 360,480 560,180 S800,80 1080,260" fill="none" stroke="rgba(140,28,19,0.14)" stroke-width="2" stroke-dasharray="8 8"/>
+    </svg>
+    <div class="experience-marker" aria-hidden="true"></div>
+
+    <div class="experience-grid">
+      <article class="experience-card experience-card-large">
+        <div class="experience-media">
+          <img src="./images/athelas.png" alt="Athelas product screenshot"/>
+        </div>
+        <div class="experience-body">
+          <div class="timeline-meta">
+            <span>2025 - now</span>
+            <span>Software Engineer</span>
+          </div>
+          <h3>Athelas</h3>
+          <p>
+            Healthcare automation platform. Shipped billing, eligibility, Charge
+            Master, appointment billing, async CSV imports up to ~50k rows, and
+            production support across Python, React/TypeScript, PostgreSQL, and
+            GCP.
+          </p>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-body">
+          <div class="timeline-meta">
+            <span>2024</span>
+            <span>Software Engineer, contract</span>
+          </div>
+          <h3>Yo Lara</h3>
+          <p>
+            Local-first ERP product flows, service-order workflows, and
+            centralized imports using React, React Aria, SQLite, PostgreSQL, and
+            PowerSync.
+          </p>
+        </div>
+        <div class="experience-logo">
+          <img src="./images/yo-lara.jpg" alt="Yo Lara logo"/>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-logo">
+          <img src="./images/gearpoint.svg" alt="Gearpoint logo"/>
+        </div>
+        <div class="experience-body">
+          <div class="timeline-meta">
+            <span>2023 - 2024</span>
+            <span>Founding Engineer</span>
+          </div>
+          <h3>Gearpoint</h3>
+          <p>
+            Built a car enthusiast social/events platform from zero to 2,000+
+            beta users. Owned Django APIs, frontend flows, payments, media
+            infrastructure, and AWS deployment.
+          </p>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <div class="experience-logo">
+          <img src="./images/bling.svg" alt="Bling logo"/>
+        </div>
+        <div class="experience-body">
+          <div class="timeline-meta">
+            <span>2020 - 2024</span>
+            <span>Software Engineer</span>
+          </div>
+          <h3>Bling</h3>
+          <p>
+            One of Brazil’s leading ERP platforms. Helped introduce Go/gRPC
+            services, co-owned a file management service, migrated 40TB+ of
+            files, and contributed to API v3 architecture.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section ventures-section" id="ventures">
+  <div class="section-heading">
+    <p class="eyebrow">Selected work</p>
+    <h2>Outside-the-day-job projects</h2>
+    <p>
+      Side business and client work where I handled strategy, operations, and
+      the technical pieces end to end.
+    </p>
+  </div>
+
+  <div class="ventures-grid">
+    <article class="venture-card venture-card-large venture-vivid">
+      <span class="card-orb orb-a" aria-hidden="true"></span>
+      <span class="card-orb orb-b" aria-hidden="true"></span>
+      <span class="card-noise" aria-hidden="true"></span>
+      <div class="venture-media">
+        <img src="./images/gheno-rotors.png" alt="GHENO rotors"/>
       </div>
-      <div>
-        <h3>Software Engineer</h3>
+      <div class="venture-body">
+        <div class="venture-tags" aria-label="GHENO focus areas">
+          <span>DOWNHILL</span>
+          <span>ENDURO</span>
+          <span>E-BIKE</span>
+          <span>HEAT CONTROL</span>
+        </div>
+        <div class="venture-kicker">Side business · Brazilian MTB components</div>
+        <h3>GHENO</h3>
         <p>
-          Shipping healthcare billing, eligibility, appointment, import, and
-          production-support workflows across Python, React, PostgreSQL, GCP,
-          Grafana, and Sentry.
+          A Brazilian performance MTB components brand built around real riding
+          experience and technical product selection. Direct-to-consumer
+          ecommerce and B2B distribution for bike shops, workshops, and
+          resellers.
         </p>
       </div>
     </article>
 
-    <article>
-      <div class="timeline-meta">
-        <span>2024</span>
-        <span>Yo Lara</span>
+    <article class="venture-card venture-warm">
+      <span class="card-shimmer" aria-hidden="true"></span>
+      <div class="venture-media">
+        <img src="./images/thermal-aquecimento.webp" alt="Thermal Aquecimento website"/>
       </div>
-      <div>
-        <h3>Software Engineer, contract</h3>
+      <div class="venture-body">
+        <div class="venture-kicker">Client project · Heating services</div>
+        <h3>Thermal Aquecimento</h3>
         <p>
-          Built local-first ERP workflows using React, React Aria, SQLite,
-          PostgreSQL, and PowerSync.
+          Helped my brother’s heating-services business with website work,
+          contracts, and budget quotations.
         </p>
-      </div>
-    </article>
-
-    <article>
-      <div class="timeline-meta">
-        <span>2023 - 2024</span>
-        <span>Gearpoint</span>
-      </div>
-      <div>
-        <h3>Founding Engineer</h3>
-        <p>
-          Owned product and infrastructure pieces for a social/events platform:
-          Django APIs, frontend flows, media services, AWS deployment, and Stripe.
-        </p>
-      </div>
-    </article>
-
-    <article>
-      <div class="timeline-meta">
-        <span>2020 - 2024</span>
-        <span>Bling</span>
-      </div>
-      <div>
-        <h3>Software Engineer</h3>
-        <p>
-          Worked on ERP systems, API architecture, Go/gRPC services, legacy PHP,
-          storage migration, and high-volume file management.
-        </p>
+        <a href="https://www.thermalaquecimento.com.br/" target="_blank" rel="noopener noreferrer">Visit site</a>
       </div>
     </article>
   </div>
