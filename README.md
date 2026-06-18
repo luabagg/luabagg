@@ -6,8 +6,8 @@
 
 <div align="left">
     <p><strong>I code</strong>:)</p>
-    <p>I have over 5 years of experience in healthcare, ERP, and SaaS, building APIs, data storage solutions, distributed systems, and messaging platforms with Python, TypeScript, Go, SQL, and cloud technologies (AWS, GCP).</p>
-    <p>I enjoy sharing what I learn, making the code better than it was, and collaborating with people who care about the software they're building.</p>
+    <p>I have 5+ years of experience building production systems across healthcare, ERP, and SaaS. I'm strong in full-stack product ownership, high-volume data/import pipelines, API design, performance optimization, observability, and production support — working in Python, Go, TypeScript, SQL, and cloud technologies (AWS, GCP).</p>
+    <p>I enjoy sharing what I learn, improving existing codebases, and collaborating with people who genuinely care about the software they build.</p>
 </div>
 
 <div>
