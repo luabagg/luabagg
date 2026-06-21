@@ -1,15 +1,15 @@
 (() => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function initTechDock() {
-    const dock = document.querySelector(".tech-dock");
-    if (!dock) return;
+  function initTechCloud() {
+    const cloud = document.querySelector(".tech-cloud");
+    if (!cloud) return;
 
-    const items = [...dock.querySelectorAll(".tech-dock-item")];
+    const items = [...cloud.querySelectorAll(".tech-cloud-item")];
     if (!items.length) return;
 
-    dock.addEventListener("pointerleave", () => {
-      items.forEach((item) => item.style.setProperty("--dock-scale", 1));
+    cloud.addEventListener("pointerleave", () => {
+      items.forEach((item) => item.style.setProperty("--tech-hover-scale", 1));
     });
 
     items.forEach((item, index) => {
@@ -17,7 +17,7 @@
         items.forEach((other, otherIndex) => {
           const distance = Math.abs(index - otherIndex);
           const scale = distance === 0 ? 1.35 : distance === 1 ? 1.15 : 1;
-          other.style.setProperty("--dock-scale", scale);
+          other.style.setProperty("--tech-hover-scale", scale);
         });
       });
     });
@@ -81,7 +81,7 @@
   }
 
   function run() {
-    initTechDock();
+    initTechCloud();
     initSecretRoomTilt();
 
     if (!reduceMotion) {

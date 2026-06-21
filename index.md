@@ -15,39 +15,73 @@ title: Luan Baggio - Software Engineer
     <p class="eyebrow">Languages and tools</p>
     <h2>Core stack</h2>
     <p>
-      The practical toolkit I reach for when building product systems: APIs,
-      async jobs, data-heavy workflows, and operational interfaces.
+      The toolkit I use for product-critical systems: APIs, async imports,
+      SQL-heavy workflows, observability, and operational interfaces.
     </p>
   </div>
 
   <div class="stack-layout">
     <article class="stack-feature">
-      <span class="stack-label">Primary languages</span>
-      <div class="tech-dock" aria-label="Primary technologies">
-        <button type="button" class="tech-dock-item">Python</button>
-        <button type="button" class="tech-dock-item">Go</button>
-        <button type="button" class="tech-dock-item">TypeScript</button>
-        <button type="button" class="tech-dock-item">SQL</button>
-        <button type="button" class="tech-dock-item">PHP</button>
-      </div>
+      <ul class="tech-cloud" aria-label="Main technologies">
+        <li class="tech-cloud-item tech-cloud-item-large">
+          <img src="https://cdn.simpleicons.org/python/3776AB" alt="" aria-hidden="true"/>
+          <span>Python</span>
+        </li>
+        <li class="tech-cloud-item tech-cloud-item-large">
+          <img src="https://cdn.simpleicons.org/go/00ADD8" alt="" aria-hidden="true"/>
+          <span>Go</span>
+        </li>
+        <li class="tech-cloud-item tech-cloud-item-large">
+          <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" aria-hidden="true"/>
+          <span>TypeScript</span>
+        </li>
+        <li class="tech-cloud-item tech-cloud-item-medium">
+          <img src="https://cdn.simpleicons.org/react/087EA4" alt="" aria-hidden="true"/>
+          <span>React</span>
+        </li>
+        <li class="tech-cloud-item tech-cloud-item-medium">
+          <img src="https://cdn.simpleicons.org/django/092E20" alt="" aria-hidden="true"/>
+          <span>Django</span>
+        </li>
+        <li class="tech-cloud-item tech-cloud-item-medium">
+          <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" aria-hidden="true"/>
+          <span>PostgreSQL</span>
+        </li>
+        <li class="tech-cloud-item tech-cloud-item-small">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" aria-hidden="true"/>
+          <span>AWS</span>
+        </li>
+        <li class="tech-cloud-item tech-cloud-item-small">
+          <img src="https://cdn.simpleicons.org/redis/DC382D" alt="" aria-hidden="true"/>
+          <span>Redis</span>
+        </li>
+        <li class="tech-cloud-item tech-cloud-item-small">
+          <img src="https://cdn.simpleicons.org/docker/2496ED" alt="" aria-hidden="true"/>
+          <span>Docker</span>
+        </li>
+        <li class="tech-cloud-item tech-cloud-item-small">
+          <img class="tech-cloud-logo-dark" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grpc/grpc-original.svg" alt="" aria-hidden="true"/>
+          <span>gRPC</span>
+        </li>
+      </ul>
     </article>
 
     <div class="stack-groups">
       <article>
         <h3>Backend</h3>
-        <p>Django, FastAPI, Gin, REST APIs, gRPC, service design, queues, import pipelines.</p>
+        <p>Python, Go, Node.js, PHP, Django, FastAPI, Gin Gonic, Express.js, API design, service architecture.</p>
       </article>
       <article>
         <h3>Frontend</h3>
-        <p>React, Vue, Next.js, Remix, accessible product flows, operational interfaces.</p>
+        <p>TypeScript, React, Vue, Next.js, Remix, Vite, shadcn/ui, Zustand, Radix UI, React Aria.</p>
       </article>
       <article>
-        <h3>Data</h3>
-        <p>PostgreSQL, MySQL, Redis, DynamoDB, Kafka, OpenSearch, S3, Cloud Storage.</p>
+        <h3>Data and async</h3>
+        <p>PostgreSQL, MySQL, Redis, DynamoDB, S3, R, Kafka, Spark, Temporal, BigQuery, query plan analysis.</p>
       </article>
       <article>
-        <h3>Operations</h3>
-        <p>AWS, GCP, Terraform, Docker, CI/CD, Grafana, Sentry, PagerDuty, incident follow-up.</p>
+        <h3>Infrastructure and ops</h3>
+        <p>AWS, GCP, Kubernetes, Docker, Terraform, CloudWatch, Cloud Logging, Datadog, New Relic, Grafana, Sentry, Incident.io.</p>
       </article>
     </div>
   </div>

@@ -290,12 +290,15 @@ h3 {
     height: auto;
     float: none;
     margin: 0;
-    border-radius: 1.4rem;
+    border-radius: 1rem;
     box-shadow: var(--shadow);
   }
 
   .intro-copy,
-  .core-stack-badges { grid-column: 1; }
+  .core-stack-badges { 
+    grid-column: 1;
+    width: 60%; 
+  }
 
   .intro-copy p {
     text-align: justify;
@@ -343,7 +346,7 @@ h3 {
       img {
         display: block;
         width: auto;
-        height: 14px;
+        height: 16px;
       }
     }
   }
@@ -424,53 +427,109 @@ h3 {
 .secret-item { @extend %surface-card; }
 
 .stack-feature {
+  position: relative;
   display: flex;
   min-height: 24rem;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-color: rgba($accent, 0.28);
   border-radius: 2rem;
+  background:
+    radial-gradient(circle at 20% 18%, rgba($accent-soft, 0.82), transparent 42%),
+    radial-gradient(circle at 88% 82%, rgba($accent, 0.16), transparent 48%),
+    $warm-gradient;
   padding: 1.35rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.12;
+    background-image: $noise-svg;
+  }
 }
 
 .stack-label,
 .timeline-meta,
 .venture-kicker { @extend %label; }
 
-.tech-dock {
+.tech-cloud {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.85rem;
-  border: 1px solid var(--line);
-  border-radius: $pill;
-  background: rgba($surface, 0.72);
-  backdrop-filter: blur(18px);
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   &-item {
-    --dock-scale: 1;
+    --tech-hover-scale: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 3rem;
-    padding: 0.4rem 1.1rem;
-    border: 1px solid var(--line);
+    gap: 0.45rem;
+    border: 1px solid rgba($accent-soft, 0.25);
     border-radius: $pill;
-    background: var(--surface);
-    color: var(--text);
+    background: linear-gradient(145deg, rgba($text, 0.96), rgba($dark-red, 0.92));
+    color: var(--surface);
     font-family: var(--font-display);
-    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.01em;
     text-transform: uppercase;
     white-space: nowrap;
     cursor: default;
-    transform: scale(var(--dock-scale));
+    box-shadow: 0 14px 34px rgba($dark-red, 0.18);
+    transform: scale(var(--tech-hover-scale));
     transform-origin: center;
-    transition: transform $fast, background $fast, border-color $fast;
+    transition: transform $fast, background $fast, border-color $fast, box-shadow $fast;
 
-    &:hover { border-color: rgba($accent, 0.35); background: #fff; }
+    img {
+      box-sizing: content-box;
+      display: block;
+      width: var(--tech-icon-size);
+      height: var(--tech-icon-size);
+      padding: 0.18rem;
+      border-radius: 0.45rem;
+      background: rgba(255, 253, 248, 0.92);
+      object-fit: contain;
+
+      &.tech-cloud-logo-dark {
+        background: #244c5a;
+      }
+    }
+
+    &:hover {
+      border-color: rgba($accent-soft, 0.62);
+      background: linear-gradient(145deg, rgba($accent, 0.98), rgba($dark-red, 0.95));
+      box-shadow: 0 18px 42px rgba($dark-red, 0.25);
+    }
+  }
+
+  &-item-large {
+    --tech-icon-size: 2rem;
+    min-height: 3.4rem;
+    padding: 0.55rem 1.15rem;
+    font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  }
+
+  &-item-medium {
+    --tech-icon-size: 1.55rem;
+    min-height: 2.85rem;
+    padding: 0.45rem 0.95rem;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+  }
+
+  &-item-small {
+    --tech-icon-size: 1.2rem;
+    min-height: 2.35rem;
+    padding: 0.35rem 0.75rem;
+    font-size: clamp(0.86rem, 1.5vw, 1rem);
   }
 }
 
