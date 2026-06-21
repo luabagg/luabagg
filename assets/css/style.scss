@@ -484,7 +484,11 @@ h3 {
     box-shadow: 0 14px 34px rgba($dark-red, 0.18);
     transform: scale(var(--tech-hover-scale));
     transform-origin: center;
-    transition: transform $fast, background $fast, border-color $fast, box-shadow $fast;
+    transition:
+      transform 520ms cubic-bezier(0.16, 1, 0.3, 1),
+      background 260ms ease,
+      border-color 260ms ease,
+      box-shadow 260ms ease;
 
     img {
       box-sizing: content-box;

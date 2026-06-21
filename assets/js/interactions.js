@@ -12,9 +12,18 @@
 
     items.forEach((item, index) => {
       item.addEventListener("pointerenter", () => {
-        items.forEach((other, otherIndex) => {
-          const distance = Math.abs(index - otherIndex);
-          const scale = distance === 0 ? 1.35 : distance === 1 ? 1.15 : 1;
+        const itemRect = item.getBoundingClientRect();
+        const itemCenterX = itemRect.left + itemRect.width / 2;
+        const itemCenterY = itemRect.top + itemRect.height / 2;
+
+        items.forEach((other) => {
+          const otherRect = other.getBoundingClientRect();
+          const otherCenterX = otherRect.left + otherRect.width / 2;
+          const otherCenterY = otherRect.top + otherRect.height / 2;
+          const sameRow = Math.abs(itemCenterY - otherCenterY) < Math.min(itemRect.height, otherRect.height) * 0.65;
+          const horizontalDistance = Math.abs(itemCenterX - otherCenterX);
+          const neighborDistance = (itemRect.width + otherRect.width) * 0.8;
+          const scale = other === item ? 1.35 : sameRow && horizontalDistance < neighborDistance ? 1.15 : 1;
           other.style.setProperty("--tech-hover-scale", scale);
         });
       });

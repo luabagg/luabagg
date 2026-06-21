@@ -24,27 +24,27 @@ title: Luan Baggio - Software Engineer
     <article class="stack-feature">
       <ul class="tech-cloud" aria-label="Main technologies">
         <li class="tech-cloud-item tech-cloud-item-large">
-          <img src="https://cdn.simpleicons.org/python/3776AB" alt="" aria-hidden="true"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" aria-hidden="true"/>
           <span>Python</span>
         </li>
         <li class="tech-cloud-item tech-cloud-item-large">
-          <img src="https://cdn.simpleicons.org/go/00ADD8" alt="" aria-hidden="true"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="" aria-hidden="true"/>
           <span>Go</span>
         </li>
         <li class="tech-cloud-item tech-cloud-item-large">
-          <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" aria-hidden="true"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" aria-hidden="true"/>
           <span>TypeScript</span>
         </li>
         <li class="tech-cloud-item tech-cloud-item-medium">
-          <img src="https://cdn.simpleicons.org/react/087EA4" alt="" aria-hidden="true"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" aria-hidden="true"/>
           <span>React</span>
         </li>
         <li class="tech-cloud-item tech-cloud-item-medium">
-          <img src="https://cdn.simpleicons.org/django/092E20" alt="" aria-hidden="true"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="" aria-hidden="true"/>
           <span>Django</span>
         </li>
         <li class="tech-cloud-item tech-cloud-item-medium">
-          <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" aria-hidden="true"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" aria-hidden="true"/>
           <span>PostgreSQL</span>
         </li>
         <li class="tech-cloud-item tech-cloud-item-small">
@@ -52,11 +52,11 @@ title: Luan Baggio - Software Engineer
           <span>AWS</span>
         </li>
         <li class="tech-cloud-item tech-cloud-item-small">
-          <img src="https://cdn.simpleicons.org/redis/DC382D" alt="" aria-hidden="true"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="" aria-hidden="true"/>
           <span>Redis</span>
         </li>
         <li class="tech-cloud-item tech-cloud-item-small">
-          <img src="https://cdn.simpleicons.org/docker/2496ED" alt="" aria-hidden="true"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="" aria-hidden="true"/>
           <span>Docker</span>
         </li>
         <li class="tech-cloud-item tech-cloud-item-small">
