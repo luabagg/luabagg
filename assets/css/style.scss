@@ -20,7 +20,7 @@ $sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 $display: "Saira Condensed", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
 $mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
 $container: min(1120px, calc(100% - 2rem));
-$container-sm: min(100% - 1rem, 1120px);
+$container-sm: min(100% - 2.5rem, 1120px);
 $fast: 180ms ease;
 $lift: 220ms ease;
 $pill: 999px;
@@ -239,12 +239,57 @@ h3 {
   }
 }
 
+.nav-toggle {
+  display: none;
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &-bars,
+  &-close {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 180ms ease;
+  }
+
+  &-bars {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  &-bar {
+    display: block;
+    width: 1.2rem;
+    height: 2px;
+    background: var(--text);
+  }
+
+  &-close {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--text);
+    opacity: 0;
+  }
+
+  &[aria-expanded="true"] {
+    .nav-toggle-bars { opacity: 0; }
+    .nav-toggle-close { opacity: 1; }
+  }
+}
+
 .readme-section {
   padding: clamp(3rem, 8vw, 6rem) 0;
 
   > div:first-child {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 12.5rem;
+    grid-template-columns: minmax(0, 1fr) 15rem;
     column-gap: clamp(2rem, 7vw, 5rem);
     align-items: start;
 
@@ -284,7 +329,7 @@ h3 {
 
   .profile-image-link img {
     display: block;
-    width: 12.5rem;
+    width: 15rem;
     max-width: 100%;
     height: auto;
     float: none;
@@ -327,7 +372,7 @@ h3 {
     display: flex;
     align-items: center;
     width: fit-content;
-    margin: 0;
+    margin: 1.25rem 0 0;
     justify-self: end;
     font-size: 0.8rem;
     line-height: 1;
@@ -411,12 +456,14 @@ h3 {
 }
 
 .stack-layout,
-.education-grid,
-.secret-grid { display: grid; gap: 1rem; }
+.education-grid { display: grid; gap: 1rem; }
 
 .stack-layout { grid-template-columns: minmax(18rem, 0.82fr) minmax(0, 1.18fr); }
 .education-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.secret-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.secret-grid {
+  column-count: 3;
+  column-gap: 1rem;
+}
 
 .stack-feature,
 .stack-groups article,
@@ -769,7 +816,7 @@ h3 {
     opacity: 0;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.34), transparent);
     transform: translateX(-70%) skewX(-18deg);
-    transition: opacity 220ms ease, transform 520ms ease;
+    transition: opacity 220ms ease, transform 900ms ease;
   }
 
   .venture-row:hover &::before {
@@ -840,19 +887,41 @@ h3 {
   li { @include pill-text; }
 }
 
-.contact-block {
+.contact-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  padding: 1.5rem;
-  border: 1px solid var(--line);
-  border-radius: 1.35rem;
-  background: $surface-soft;
+  gap: 0.55rem;
+  width: fit-content;
+  max-width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid rgba($text, 0.1);
+    border-radius: 999px;
+    background: rgba(#fff, 0.82);
+    color: var(--text);
+    text-decoration: none;
+    box-shadow: 0 0.4rem 1rem rgba($text, 0.04);
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 auto;
+    fill: var(--accent);
+  }
+
+  strong {
     overflow-wrap: anywhere;
-    color: var(--accent);
-    font-weight: 650;
+    color: $text;
+    font-size: 0.82rem;
+    font-weight: 700;
   }
 }
 
@@ -879,30 +948,18 @@ h3 {
 }
 
 .secret-item {
-  margin: 0;
+  margin: 0 0 1rem;
   padding: 0.75rem;
   border-radius: 1.25rem;
+  break-inside: avoid;
 
   img {
     display: block;
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    height: auto;
     border-radius: 0.85rem;
   }
 
-  &-wide {
-    grid-column: span 2;
-
-    img { aspect-ratio: 2 / 1; }
-  }
-
-  figcaption {
-    margin-top: 0.75rem;
-    color: var(--muted);
-    font-size: 0.9rem;
-    text-align: center;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -916,13 +973,52 @@ h3 {
 }
 
 @media (max-width: 840px) {
-  .site-header-inner,
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
   }
 
-  .site-nav { flex-wrap: wrap; }
+  .site-header-inner {
+    position: relative;
+    align-items: center;
+  }
+
+  .nav-toggle { display: flex; }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    min-width: 10rem;
+    padding: 0.5rem;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    background: rgba($surface, 0.96);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem);
+    transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    a {
+      width: 100%;
+      padding: 0.6rem 0.85rem;
+      border-radius: 0.6rem;
+
+      &:hover { transform: none; }
+    }
+  }
 
   .section-heading,
   .stack-layout,
@@ -944,23 +1040,48 @@ h3 {
     min-height: auto;
 
     > div:first-child {
-      display: block;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      column-gap: 1rem;
+      align-items: center;
+    }
+
+    h1 {
+      grid-column: 1;
+      max-width: none;
+      margin-bottom: 0;
+      font-size: clamp(2.4rem, 12vw, 4rem);
+    }
+
+    .profile-image-link {
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: end;
     }
 
     .profile-image-link img {
-      width: min(100%, 18rem);
-      margin: 0 0 1.5rem;
+      width: clamp(4rem, 22vw, 6rem);
+      margin: 0;
+    }
+
+    .intro-copy,
+    .core-stack-badges,
+    .readme-socials,
+    .github-stats-block {
+      grid-column: 1 / -1;
     }
 
     .readme-socials {
       max-width: 100%;
-      margin: 0 0 1.5rem auto;
+      margin: 1.25rem 0 0;
+      justify-self: end;
     }
 
     .github-stats-block { margin-top: 2.5rem; }
-  }
 
-  h1 { max-width: 10.5ch; }
+    .intro-copy,
+    .core-stack-badges { width: 100%; }
+  }
 
   .stack-groups { grid-template-columns: 1fr; }
 
@@ -977,6 +1098,14 @@ h3 {
     --experience-node-x: 0rem;
     --experience-node-scale: 1;
     display: block;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      --experience-card-x: 0rem;
+      --experience-node-x: 0rem;
+    }
 
     .experience-card,
     &:nth-child(even) .experience-card { grid-column: auto; }
@@ -1013,13 +1142,7 @@ h3 {
 
   .stack-feature,
   .stack-groups article,
-  .contact-block { border-radius: 1rem; }
+  .contact-list { border-radius: 1rem; }
 
-  .secret-grid { grid-template-columns: 1fr; }
-
-  .secret-item-wide {
-    grid-column: auto;
-
-    img { aspect-ratio: 1 / 1; }
-  }
+  .secret-grid { column-count: 1; }
 }

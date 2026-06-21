@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Luan Baggio - Software Engineer
 ---
 
 <section class="readme-section" id="intro" aria-label="Profile introduction">
@@ -246,8 +245,8 @@ title: Luan Baggio - Software Engineer
     <p class="eyebrow">Education</p>
     <h2>Statistics, data, and software foundations</h2>
     <p>
-      Two programs that shaped how I think about systems, data, and the
-      trade-offs behind every decision.
+      Formal training that still shows up in how I model uncertainty, design
+      systems, and reason about product trade-offs.
     </p>
   </div>
 
@@ -259,10 +258,10 @@ title: Luan Baggio - Software Engineer
       </div>
       <p class="education-degree">Statistics &amp; Data Science</p>
       <ul class="education-badges">
-        <li>Statistics</li>
-        <li>Data Science</li>
+        <li>Inference</li>
         <li>Probability</li>
-        <li>Statistical Modeling</li>
+        <li>Data Analysis</li>
+        <li>Experimentation</li>
       </ul>
     </article>
 
@@ -273,9 +272,9 @@ title: Luan Baggio - Software Engineer
       </div>
       <p class="education-degree">Internet Computing</p>
       <ul class="education-badges">
-        <li>Web Development</li>
         <li>Programming</li>
-        <li>Networking</li>
+        <li>Web Systems</li>
+        <li>Databases</li>
         <li>Systems Analysis</li>
       </ul>
     </article>
@@ -287,13 +286,28 @@ title: Luan Baggio - Software Engineer
     <p class="eyebrow">Contact</p>
     <h2>Let&rsquo;s talk</h2>
     <p>
-      Reach out for work, collaboration, or just to say hi.
+      Best places to reach me for work, collaboration, or a useful conversation.
     </p>
   </div>
 
-  <div class="contact-block">
-    <a href="mailto:luanbaggio0@gmail.com">luanbaggio0@gmail.com</a>
-    <a href="https://github.com/luabagg">github.com/luabagg</a>
-    <a href="https://linkedin.com/in/luabagg">linkedin.com/in/luabagg</a>
-  </div>
+  <ul class="contact-list" aria-label="Contact links">
+    <li>
+      <a href="mailto:luanbaggio0@gmail.com">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6.75A2.75 2.75 0 0 1 6.75 4h10.5A2.75 2.75 0 0 1 20 6.75v10.5A2.75 2.75 0 0 1 17.25 20H6.75A2.75 2.75 0 0 1 4 17.25V6.75Zm2.75-1.25c-.42 0-.8.2-1.03.51l5.61 5.05c.38.34.96.34 1.34 0l5.61-5.05a1.24 1.24 0 0 0-1.03-.51H6.75Zm11.75 2.35-4.83 4.34a2.5 2.5 0 0 1-3.34 0L5.5 7.85v9.4c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-9.4Z"/></svg>
+        <strong>luanbaggio0@gmail.com</strong>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/luabagg">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.25A9.75 9.75 0 0 0 8.92 21.26c.49.09.67-.21.67-.47v-1.71c-2.72.59-3.29-1.16-3.29-1.16-.45-1.13-1.09-1.43-1.09-1.43-.89-.61.07-.6.07-.6.98.07 1.5 1.01 1.5 1.01.87 1.49 2.28 1.06 2.84.81.09-.63.34-1.06.62-1.31-2.17-.25-4.45-1.09-4.45-4.83 0-1.07.38-1.94 1-2.62-.1-.25-.44-1.24.1-2.59 0 0 .82-.26 2.68 1a9.2 9.2 0 0 1 4.86 0c1.86-1.26 2.68-1 2.68-1 .54 1.35.2 2.34.1 2.59.63.68 1 1.55 1 2.62 0 3.75-2.29 4.58-4.47 4.82.35.31.66.9.66 1.82v2.58c0 .26.18.57.68.47A9.75 9.75 0 0 0 12 2.25Z"/></svg>
+        <strong>github.com/luabagg</strong>
+      </a>
+    </li>
+    <li>
+      <a href="https://linkedin.com/in/luabagg">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.94 8.98H3.9V20h3.04V8.98ZM5.42 4A1.76 1.76 0 1 0 5.4 7.52 1.76 1.76 0 0 0 5.42 4Zm5.52 4.98H8.03V20h3.03v-5.77c0-1.52.29-3 2.18-3 1.86 0 1.88 1.74 1.88 3.09V20h3.04v-6.4c0-3.14-.68-5.55-4.35-5.55-1.76 0-2.94.96-3.42 1.88h-.04l-.41-.95Z"/></svg>
+        <strong>linkedin.com/in/luabagg</strong>
+      </a>
+    </li>
+  </ul>
 </section>

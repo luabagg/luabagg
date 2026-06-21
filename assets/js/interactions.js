@@ -63,6 +63,42 @@
     entries.forEach((entry) => observer.observe(entry));
   }
 
+  function initNavToggle() {
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.getElementById("primary-nav");
+    if (!toggle || !nav) return;
+
+    const open = () => {
+      nav.classList.add("is-open");
+      toggle.setAttribute("aria-expanded", "true");
+    };
+
+    const close = () => {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+
+    toggle.addEventListener("click", () => {
+      nav.classList.contains("is-open") ? close() : open();
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", close);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!toggle.contains(event.target) && !nav.contains(event.target)) close();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") close();
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 840) close();
+    });
+  }
+
   function initSecretRoomTilt() {
     const items = document.querySelectorAll(".secret-item");
     if (!items.length) return;
@@ -92,6 +128,7 @@
   }
 
   function run() {
+    initNavToggle();
     initTechCloud();
     initExperienceTimeline();
     initSecretRoomTilt();

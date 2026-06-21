@@ -1,54 +1,42 @@
 ---
 layout: default
-title: Secret Room
+title: Backrooms
 ---
 
 <section class="section secret-room" id="secret-room">
-  <a class="secret-back" href="./">← Back to the normal world</a>
+  <a class="secret-back" href="../">← go back!</a>
 
   <div class="section-heading">
-    <p class="eyebrow">Unauthorized access detected</p>
-    <h2>WOAH! You just entered the secret room...</h2>
-    <p>
-      A curated shelf of memes, relics, and questionable life choices.
-      Click at your own risk.
-    </p>
+    <h2>You just entered the backrooms</h2>
   </div>
 
   <div class="secret-grid">
     <figure class="secret-item">
-      <img src="./images/cat.jpg" alt="Cat"/>
-      <figcaption> Certified office manager. </figcaption>
+      <img src="{{ '/images/real-job.jpg' | relative_url }}" alt="Real Job"/>
     </figure>
 
     <figure class="secret-item">
-      <img src="./images/js-nightmare.jpg" alt="JS Nightmare"/>
-      <figcaption> Every frontend PR at 3 PM on a Friday. </figcaption>
+      <img src="{{ '/images/wobbly-mirror.gif' | relative_url }}" alt="Wobbly Mirror"/>
     </figure>
 
     <figure class="secret-item">
-      <img src="./images/real-job.jpg" alt="Real Job"/>
-      <figcaption> What relatives think I do. </figcaption>
+      <img src="{{ '/images/templeos.jpg' | relative_url }}" alt="TempleOS"/>
     </figure>
 
     <figure class="secret-item">
-      <img src="./images/templeos.jpg" alt="TempleOS"/>
-      <figcaption> Respect. </figcaption>
+      <img src="{{ '/images/school.jpg' | relative_url }}" alt="School"/>
     </figure>
 
     <figure class="secret-item">
-      <img src="./images/school.jpg" alt="School"/>
-      <figcaption> How it started. </figcaption>
-    </figure>
-
-    <figure class="secret-item secret-item-wide">
-      <img src="./images/wobbly-mirror.gif" alt="Wobbly Mirror"/>
-      <figcaption> The infinite wobble. Do not stare for too long. </figcaption>
+      <img src="{{ '/images/christ-guides-me.jpeg' | relative_url }}" alt="Christ Guides Me"/>
     </figure>
 
     <figure class="secret-item">
-      <img src="./images/christ-guides-me.jpeg" alt="Christ Guides Me"/>
-      <figcaption> Core dependency. </figcaption>
+      <img src="{{ '/images/cat.jpg' | relative_url }}" alt="Cat"/>
+    </figure>
+
+    <figure class="secret-item">
+      <img src="{{ '/images/js-nightmare.jpg' | relative_url }}" alt="JS Nightmare"/>
     </figure>
   </div>
 </section>
