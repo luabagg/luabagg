@@ -1,6 +1,35 @@
-remote_theme: pages-themes/cayman@v0.2.0
-title: luabagg's porftolio
-description: 👨‍💻 this is my portfolio website! Feel free to explore.
+title: Luan Baggio - Software Engineer
+description: >-
+  Software engineer with 5+ years building production systems across healthcare,
+  ERP platforms, and SaaS products. Strong in full-stack product ownership, high-volume
+  data/import pipelines, API design, performance optimization, observability, and
+  production support. Core competencies: Python, Go, TypeScript, AWS, GCP.
+
 plugins:
-- jekyll-remote-theme
-- jekyll-seo-tag
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .ruby-version
+  - error.log
+
+lang: en-US
+author:
+  name: Luan Baggio
+  email: contact@luabagg.dev
+
+github:
+  username: luabagg
+
+social:
+  name: Luan Baggio
+  links:
+    - https://linkedin.com/in/luabagg
+    - https://github.com/luabagg
+
+twitter:
+  username: luabagg
