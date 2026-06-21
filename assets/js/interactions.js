@@ -1,6 +1,4 @@
 (() => {
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
   function initTechCloud() {
     const cloud = document.querySelector(".tech-cloud");
     if (!cloud) return;
@@ -23,33 +21,37 @@
     });
   }
 
-  function initTimelineMotion() {
-    if (!window.gsap || !window.ScrollTrigger || !window.MotionPathPlugin) return;
+  function initExperienceTimeline() {
+    const entries = [...document.querySelectorAll(".experience-entry")];
+    if (!entries.length) return;
 
-    gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+    const setActiveEntry = (activeIndex) => {
+      entries.forEach((entry, index) => {
+        entry.classList.toggle("is-complete", index < activeIndex);
+        entry.classList.toggle("is-active", index === activeIndex);
+      });
+    };
 
-    const marker = document.querySelector(".experience-marker");
-    const path = document.querySelector("#career-path");
-    const section = document.querySelector(".experience-motion");
+    setActiveEntry(0);
 
-    if (!marker || !path || !section) return;
+    if (!("IntersectionObserver" in window)) return;
 
-    gsap.set(marker, { opacity: 1 });
+    const observer = new IntersectionObserver((observedEntries) => {
+      const visibleEntries = observedEntries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => {
+          const viewportCenter = window.innerHeight / 2;
+          const aCenter = a.boundingClientRect.top + a.boundingClientRect.height / 2;
+          const bCenter = b.boundingClientRect.top + b.boundingClientRect.height / 2;
+          return Math.abs(aCenter - viewportCenter) - Math.abs(bCenter - viewportCenter);
+        });
 
-    gsap.to(marker, {
-      motionPath: {
-        path,
-        align: path,
-        alignOrigin: [0.5, 0.5],
-      },
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top 75%",
-        end: "bottom 75%",
-        scrub: true,
-      },
-    });
+      if (!visibleEntries.length) return;
+
+      setActiveEntry(entries.indexOf(visibleEntries[0].target));
+    }, { rootMargin: "-35% 0px -35% 0px" });
+
+    entries.forEach((entry) => observer.observe(entry));
   }
 
   function initSecretRoomTilt() {
@@ -82,10 +84,7 @@
 
   function run() {
     initTechCloud();
+    initExperienceTimeline();
     initSecretRoomTilt();
-
-    if (!reduceMotion) {
-      initTimelineMotion();
-    }
   }
 })();

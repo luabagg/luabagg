@@ -240,7 +240,6 @@ h3 {
 }
 
 .readme-section {
-  min-height: calc(100dvh - 6rem);
   padding: clamp(3rem, 8vw, 6rem) 0;
 
   > div:first-child {
@@ -552,54 +551,86 @@ h3 {
 .experience-path {
   position: absolute;
   top: 0;
-  left: 1.5rem;
-  width: 2rem;
+  left: 50%;
+  width: clamp(7rem, 12vw, 10rem);
   height: 100%;
+  transform: translateX(-50%);
   pointer-events: none;
   overflow: visible;
 }
 
-.experience-marker,
 .experience-node,
 .card-orb { position: absolute; border-radius: $pill; pointer-events: none; }
-
-.experience-marker {
-  top: 0;
-  left: 0;
-  width: 1.1rem;
-  height: 1.1rem;
-  margin: -0.55rem;
-  background: var(--accent);
-  box-shadow: 0 0 0 6px rgba($accent, 0.18);
-  opacity: 0;
-}
 
 .experience-timeline {
   position: relative;
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
-  padding: 0 0 0 4rem;
+  padding: 0;
 }
 
-.experience-entry { position: relative; }
+.experience-entry {
+  --experience-card-x: 0rem;
+  --experience-node-x: 0rem;
+  --experience-node-scale: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 5.5rem minmax(0, 1fr);
+  align-items: start;
+
+  .experience-card { grid-column: 3; }
+
+  &:nth-child(even) .experience-card { grid-column: 1; }
+
+  &:nth-child(1) { --experience-card-x: 1.15rem; --experience-node-x: 0.8rem; }
+  &:nth-child(2) { --experience-card-x: -1.35rem; --experience-node-x: -1rem; }
+  &:nth-child(3) { --experience-card-x: -0.65rem; --experience-node-x: 0.9rem; }
+  &:nth-child(4) { --experience-card-x: 0.9rem; --experience-node-x: -0.7rem; }
+
+  &.is-complete,
+  &.is-active {
+    .experience-node {
+      border-color: var(--accent);
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba($accent, 0.18);
+    }
+  }
+
+  &.is-active {
+    --experience-node-scale: 1.22;
+
+    .experience-card {
+      --experience-card-y: -3px;
+      border-color: rgba($accent, 0.42);
+      box-shadow: 0 18px 48px rgba($accent, 0.13);
+      transform: translateX(var(--experience-card-x)) translateY(var(--experience-card-y));
+
+      &::before { opacity: 1; }
+    }
+  }
+}
 
 .experience-node {
-  left: -2.6rem;
+  left: calc(50% + var(--experience-node-x));
   top: 1.6rem;
   width: 0.85rem;
   height: 0.85rem;
+  transform: translateX(-50%) scale(var(--experience-node-scale));
   border: 2px solid var(--accent);
   background: var(--surface);
   box-shadow: 0 0 0 4px rgba($bg, 0.9);
+  transition: transform $fast, background $fast, box-shadow $fast;
 }
 
 .experience-card {
   @include card;
   @include lift-card;
+  --experience-card-y: 0rem;
   display: flex;
   flex-direction: row;
+  transform: translateX(var(--experience-card-x)) translateY(var(--experience-card-y));
 
   &::before {
     content: "";
@@ -613,7 +644,12 @@ h3 {
     transition: opacity 300ms ease;
   }
 
-  &:hover::before { opacity: 1; }
+  &:hover {
+    --experience-card-y: -3px;
+    transform: translateX(var(--experience-card-x)) translateY(var(--experience-card-y));
+
+    &::before { opacity: 1; }
+  }
 }
 
 .experience-media {
@@ -902,7 +938,6 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 
-  .experience-marker,
   .card-orb,
   .card-noise,
   .card-shimmer { display: none !important; }
@@ -963,6 +998,30 @@ h3 {
   h1 { max-width: 10.5ch; }
 
   .stack-groups { grid-template-columns: 1fr; }
+
+  .experience-path {
+    left: 0.5rem;
+    width: 2rem;
+    transform: none;
+  }
+
+  .experience-timeline { padding-left: 2.5rem; }
+
+  .experience-entry {
+    --experience-card-x: 0rem;
+    --experience-node-x: 0rem;
+    --experience-node-scale: 1;
+    display: block;
+
+    .experience-card,
+    &:nth-child(even) .experience-card { grid-column: auto; }
+  }
+
+  .experience-node {
+    left: -1.6rem;
+    transform: scale(var(--experience-node-scale));
+  }
+
   .venture-media { min-height: 10rem; max-height: 14rem; }
 }
 
@@ -978,9 +1037,6 @@ h3 {
   .stack-groups article,
   .contact-block { border-radius: 1rem; }
 
-  .experience-timeline { padding-left: 2.5rem; }
-  .experience-node { left: -1.6rem; }
-  .experience-path { left: 0.5rem; }
   .secret-grid { grid-template-columns: 1fr; }
 
   .secret-item-wide {
