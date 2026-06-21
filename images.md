@@ -4,7 +4,7 @@ title: Backrooms
 ---
 
 <section class="section secret-room" id="secret-room">
-  <a class="secret-back" href="../">← go back!</a>
+  <a class="secret-back" href="{{ '/' | relative_url }}">← go back!</a>
 
   <div class="section-heading">
     <h2>You just entered the backrooms</h2>
