@@ -297,20 +297,27 @@ h3 {
   .intro-copy,
   .core-stack-badges { grid-column: 1; }
 
+  .intro-copy p {
+    text-align: justify;
+    text-align-last: left;
+    text-wrap: pretty;
+    hyphens: auto;
+  }
+
   .github-stats-block {
     grid-column: 1 / -1;
     margin-top: 3.5rem;
   }
 
-  div:has(img[src*="img.shields.io"]):not(.core-stack-badges):not(.readme-socials):not(.readme-socials-badges),
-  .core-stack-badges {
+  .readme-badges {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
   }
 
-  div:has(img[src*="img.shields.io"]):not(.core-stack-badges):not(.readme-socials):not(.readme-socials-badges) { gap: 0.35rem; }
-  .core-stack-badges { gap: 0; }
+  .core-stack-badges {
+    flex-wrap: wrap;
+    gap: 0;
+  }
 
   .readme-socials {
     grid-column: 2;
@@ -326,9 +333,7 @@ h3 {
     white-space: nowrap;
 
     &-badges {
-      display: flex;
       flex-wrap: nowrap;
-      align-items: center;
       justify-content: flex-end;
       gap: 0.22rem;
       white-space: nowrap;
@@ -355,7 +360,9 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: space-evenly;
   gap: 0.75rem;
+  width: 100%;
 
   a {
     display: block;

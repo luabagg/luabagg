@@ -8,8 +8,10 @@ description: >-
 plugins:
   - jekyll-seo-tag
 
+sass:
+  style: compressed
+
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
   - .ruby-version
