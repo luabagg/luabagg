@@ -195,21 +195,17 @@ title: Luan Baggio - Software Engineer
     <p class="eyebrow">Selected work</p>
     <h2>Outside-the-day-job projects</h2>
     <p>
-      Side business and client work where I handled strategy, operations, and
-      the technical pieces end to end.
+      Projects where I owned more than code: product shape, operations,
+      commercial details, and the technical path to ship.
     </p>
   </div>
 
-  <div class="ventures-grid">
-    <article class="venture-card venture-card-large venture-gheno">
-      <span class="card-orb orb-a" aria-hidden="true"></span>
-      <span class="card-orb orb-b" aria-hidden="true"></span>
-      <span class="card-noise" aria-hidden="true"></span>
-      <span class="card-shimmer" aria-hidden="true"></span>
-      <div class="venture-media">
-        <img src="./images/gheno-rotors.png" alt="GHENO rotors"/>
+  <div class="ventures-list">
+    <article class="venture-row venture-gheno">
+      <div class="venture-logo" aria-hidden="true">
+        <img src="./images/gheno-rotors.png" alt=""/>
       </div>
-      <div class="venture-body">
+      <div class="venture-panel">
         <div class="venture-tags" aria-label="GHENO focus areas">
           <span>DOWNHILL</span>
           <span>ENDURO</span>
@@ -223,20 +219,21 @@ title: Luan Baggio - Software Engineer
           ecommerce and B2B distribution for bike shops, workshops, and
           resellers.
         </p>
+        <a href="https://ghenortrs.com.br/" target="_blank" rel="noopener noreferrer">Visit site</a>
       </div>
     </article>
 
-    <article class="venture-card venture-warm">
-      <span class="card-shimmer" aria-hidden="true"></span>
-      <div class="venture-media">
-        <img src="./images/thermal-aquecimento.webp" alt="Thermal Aquecimento website"/>
+    <article class="venture-row venture-warm">
+      <div class="venture-logo" aria-hidden="true">
+        <img src="./images/thermal-aquecimento.png" alt=""/>
       </div>
-      <div class="venture-body">
+      <div class="venture-panel">
         <div class="venture-kicker">Client project · Heating services</div>
         <h3>Thermal Aquecimento</h3>
         <p>
-          Helped my brother’s heating-services business with website work,
-          contracts, and budget quotations.
+          Heating and solar-energy business focused on residential, commercial,
+          and industrial projects. Supported website work, contracts, and budget
+          quotation flows.
         </p>
         <a href="https://www.thermalaquecimento.com.br/" target="_blank" rel="noopener noreferrer">Visit site</a>
       </div>
