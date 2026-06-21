@@ -116,7 +116,7 @@ layout: default
             <h3>Bling</h3>
             <p>
               Backend and platform work across a large ERP, helping modernize a
-              PHP-heavy stack with Go services and API v3. Co-owned a Go/gRPC/S3
+              PHP-heavy stack with Go services and a new API version. Co-owned a Go/gRPC/S3
               file service serving 100k+ daily requests and supporting a 40TB+ migration.
             </p>
           </div>
@@ -137,7 +137,7 @@ layout: default
             <h3>Gearpoint</h3>
             <p>
               Built a car enthusiast social/events platform from zero to 2,000+
-              users as founding engineer. Owned Python/Django Ninja APIs, Go/Gin
+              users as founding engineer. Owned Python/Django APIs, Go/Gin
               media processing, AWS infra, auth, Stripe, observability, and SQS workflows.
             </p>
           </div>
@@ -178,9 +178,10 @@ layout: default
             </div>
             <h3>Athelas</h3>
             <p>
-              Healthcare automation systems for billing, appointments, eligibility,
-              patient responsibility, and clinic operations. Owned Charge Master imports/APIs,
-              cut appointment latency 50%, and supported production across critical workflows.
+              Building RCM systems for clinics across eligibility, appointments,
+              patient responsibility, and billing workflows. Owned Charge Master
+              delivery end-to-end, optimized appointment query paths, contributed to
+              rule-engine fixes, and handled production support across critical flows.
             </p>
           </div>
         </article>
@@ -245,15 +246,18 @@ layout: default
     <p class="eyebrow">Education</p>
     <h2>Statistics, data, and software foundations</h2>
     <p>
-      Formal training that still shows up in how I model uncertainty, design
-      systems, and reason about product trade-offs.
+      A mix of statistical thinking and software foundations: reasoning about
+      data, uncertainty, web systems, and the trade-offs behind working products.
     </p>
   </div>
 
   <div class="education-grid">
     <article class="education-card">
       <div class="education-card-head">
-        <h3>UFSM</h3>
+        <div class="education-title-row">
+          <h3>UFSM</h3>
+          <span>2024 — current</span>
+        </div>
         <span class="education-tag">Universidade Federal de Santa Maria</span>
       </div>
       <p class="education-degree">Statistics &amp; Data Science</p>
@@ -267,7 +271,10 @@ layout: default
 
     <article class="education-card">
       <div class="education-card-head">
-        <h3>IFRS</h3>
+        <div class="education-title-row">
+          <h3>IFRS</h3>
+          <span>2018 — 2021</span>
+        </div>
         <span class="education-tag">Instituto Federal do Rio Grande do Sul</span>
       </div>
       <p class="education-degree">Internet Computing</p>
@@ -286,7 +293,7 @@ layout: default
     <p class="eyebrow">Contact</p>
     <h2>Let&rsquo;s talk</h2>
     <p>
-      Best places to reach me for work, collaboration, or a useful conversation.
+      Always happy to talk about work, ideas, or anything worth building.
     </p>
   </div>
 

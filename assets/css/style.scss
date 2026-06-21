@@ -863,6 +863,23 @@ h3 {
   }
 }
 
+.education-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+
+  span {
+    color: var(--muted);
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+
 .education-tag {
   color: var(--muted);
   font-family: var(--font-mono);
