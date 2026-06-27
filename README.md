@@ -1,13 +1,12 @@
 <div>
-<h1>Hi there! 😼</h1>
+<h1>Luan Baggio</h1>
 
 <a class="profile-image-link" href="./images" target="_blank">
     <img src="./images/luabagg.jpg" width="200" align="right" alt="luabagg"/>
 </a>
 
 <div class="intro-copy">
-    <p><strong>I code </strong>:)</p>
-    <p>Software Engineer with 6+ years of experience building production systems across healthcare, ERP, and SaaS.</p>
+    <p>Software Engineer with 6+ years of experience building production systems across healthcare, ERP, and SaaS 😼</p>
     <p>I like working close to the product, owning problems end to end, and collaborating with people who genuinely care about the software they build.</p>
 </div>
 
