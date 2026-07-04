@@ -22,7 +22,7 @@ jobs:
       # main info, contribution calendar, languages, notable contributions,
       # and starred topics.
       - name: Profile summary
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: assets/metrics.general.svg
