@@ -34,30 +34,10 @@
 
 <div class="github-stats-block">
     <h2>GitHub Stats and Projects 📌</h2>
-    <div class="stats-showcase">
-        <a class="metrics-profile-link" href="https://github.com/luabagg" target="_blank" rel="noopener noreferrer">
-            <img class="metrics-card metrics-card-profile" src="./assets/metrics.general.svg" alt="Luan's GitHub profile summary" loading="lazy"/>
-        </a>
-
-        <div class="project-cards" aria-label="Featured GitHub projects">
-            <a class="project-card" href="https://github.com/luabagg/orcgen" target="_blank" rel="noopener noreferrer">
-                <span class="project-card-kicker">Featured repository</span>
-                <strong>orcgen</strong>
-                <span>Web pages and HTML content conversion.</span>
-                <span class="project-card-meta">Go · MIT · 14 stars</span>
-            </a>
-            <a class="project-card" href="https://github.com/gearpoint/filepoint" target="_blank" rel="noopener noreferrer">
-                <span class="project-card-kicker">Featured repository</span>
-                <strong>filepoint</strong>
-                <span>Gearpoint's file management service.</span>
-                <span class="project-card-meta">Go · 1 star</span>
-            </a>
-            <a class="project-card" href="https://github.com/luabagg/obsidian-statistics-vault" target="_blank" rel="noopener noreferrer">
-                <span class="project-card-kicker">Featured repository</span>
-                <strong>obsidian-statistics-vault</strong>
-                <span>Statistics notes in markdown format.</span>
-                <span class="project-card-meta">Notes · 4 stars</span>
-            </a>
-        </div>
+    <div class="stats-grid">
+        <img class="metrics-card metrics-card-profile" src="./assets/metrics.profile.svg" width="420" height="auto" alt="Luan's GitHub profile metrics" loading="lazy"/>
+        <img class="metrics-card metrics-card-isocalendar" src="./assets/metrics.isocalendar.svg" width="420" height="auto" alt="Luan's half-year commit graph" loading="lazy"/>
+        <img class="metrics-card metrics-card-languages" src="./assets/metrics.languages.svg" width="420" height="auto" alt="Luan's most-used languages" loading="lazy"/>
+        <img class="metrics-card metrics-card-repositories" src="./assets/metrics.repositories.svg" width="420" height="auto" alt="Luan's featured repositories" loading="lazy"/>
     </div>
 </div>
