@@ -49,6 +49,9 @@ jobs:
           filename: assets/metrics.languages.svg
           template: classic
           config_display: columns
+          # The language plugin underestimates height when details are enabled,
+          # which clips the last row in README/portfolio image embeds.
+          config_padding: 0, 35
           base: ""
           plugin_languages: yes
           plugin_languages_sections: most-used
