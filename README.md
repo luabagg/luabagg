@@ -34,18 +34,30 @@
 
 <div class="github-stats-block">
     <h2>GitHub Stats and Projects 📌</h2>
-    <div class="stats-grid stats-grid-profile">
-        <a href="https://github.com/luabagg" target="_blank" rel="noopener noreferrer">
-            <img class="metrics-card metrics-card-profile" src="./assets/metrics.general.svg" width="390" height="auto" alt="Luan's GitHub profile summary" loading="lazy"/>
+    <div class="stats-showcase">
+        <a class="metrics-profile-link" href="https://github.com/luabagg" target="_blank" rel="noopener noreferrer">
+            <img class="metrics-card metrics-card-profile" src="./assets/metrics.general.svg" alt="Luan's GitHub profile summary" loading="lazy"/>
         </a>
-        <a href="https://github.com/luabagg/orcgen" target="_blank" rel="noopener noreferrer">
-            <img class="metrics-card metrics-card-project" src="./assets/metrics.repo.orcgen.svg" width="390" height="auto" alt="orcgen project metrics" loading="lazy"/>
-        </a>
-        <a href="https://github.com/gearpoint/filepoint" target="_blank" rel="noopener noreferrer">
-            <img class="metrics-card metrics-card-project" src="./assets/metrics.repo.filepoint.svg" width="390" height="auto" alt="filepoint project metrics" loading="lazy"/>
-        </a>
-        <a href="https://github.com/luabagg/obsidian-statistics-vault" target="_blank" rel="noopener noreferrer">
-            <img class="metrics-card metrics-card-project" src="./assets/metrics.repo.obsidian-statistics-vault.svg" width="390" height="auto" alt="obsidian-statistics-vault project metrics" loading="lazy"/>
-        </a>
+
+        <div class="project-cards" aria-label="Featured GitHub projects">
+            <a class="project-card" href="https://github.com/luabagg/orcgen" target="_blank" rel="noopener noreferrer">
+                <span class="project-card-kicker">Featured repository</span>
+                <strong>orcgen</strong>
+                <span>Web pages and HTML content conversion.</span>
+                <span class="project-card-meta">Go · MIT · 14 stars</span>
+            </a>
+            <a class="project-card" href="https://github.com/gearpoint/filepoint" target="_blank" rel="noopener noreferrer">
+                <span class="project-card-kicker">Featured repository</span>
+                <strong>filepoint</strong>
+                <span>Gearpoint's file management service.</span>
+                <span class="project-card-meta">Go · 1 star</span>
+            </a>
+            <a class="project-card" href="https://github.com/luabagg/obsidian-statistics-vault" target="_blank" rel="noopener noreferrer">
+                <span class="project-card-kicker">Featured repository</span>
+                <strong>obsidian-statistics-vault</strong>
+                <span>Statistics notes in markdown format.</span>
+                <span class="project-card-meta">Notes · 4 stars</span>
+            </a>
+        </div>
     </div>
 </div>

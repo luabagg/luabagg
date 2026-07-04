@@ -42,38 +42,3 @@ jobs:
           plugin_topics: yes
           plugin_topics_mode: icons
           plugin_topics_limit: 12
-
-      # Keep project cards separate so each image can be wrapped in its own
-      # clickable README link. Links inside SVG <img> embeds cannot work on GitHub.
-      - name: Project card - orcgen
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          filename: assets/metrics.repo.orcgen.svg
-          template: classic
-          config_display: columns
-          base: ""
-          plugin_repositories: yes
-          plugin_repositories_featured: luabagg/orcgen
-
-      - name: Project card - filepoint
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          filename: assets/metrics.repo.filepoint.svg
-          template: classic
-          config_display: columns
-          base: ""
-          plugin_repositories: yes
-          plugin_repositories_featured: gearpoint/filepoint
-
-      - name: Project card - obsidian-statistics-vault
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          filename: assets/metrics.repo.obsidian-statistics-vault.svg
-          template: classic
-          config_display: columns
-          base: ""
-          plugin_repositories: yes
-          plugin_repositories_featured: luabagg/obsidian-statistics-vault
