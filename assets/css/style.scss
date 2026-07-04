@@ -395,7 +395,8 @@ h3 {
     }
   }
 
-  img[src*="github-readme-stats"] {
+  .metrics-card,
+  img[src*="metrics"] {
     max-width: 100%;
     height: auto;
     margin: 0.35rem 0.35rem 0.35rem 0;
@@ -416,11 +417,12 @@ h3 {
     line-height: 0;
   }
 
-  img[src*="github-readme-stats"] {
+  .metrics-card,
+  img[src*="metrics"] {
     display: block;
-    width: auto;
-    height: clamp(6.75rem, 11vw, 7.5rem);
+    width: 420px;
     max-width: 100%;
+    height: auto;
     margin: 0;
   }
 }
