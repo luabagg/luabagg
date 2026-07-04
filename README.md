@@ -34,8 +34,18 @@
 
 <div class="github-stats-block">
     <h2>GitHub Stats and Projects 📌</h2>
-    <div class="stats-grid">
-        <img class="metrics-card metrics-card-languages" src="./assets/metrics.languages.svg" width="420" height="auto" alt="Luan's most-used languages" loading="lazy"/>
-        <img class="metrics-card metrics-card-repositories" src="./assets/metrics.repositories.svg" width="420" height="auto" alt="Luan's pinned GitHub repositories" loading="lazy"/>
+    <div class="stats-grid stats-grid-profile">
+        <a href="https://github.com/luabagg" target="_blank" rel="noopener noreferrer">
+            <img class="metrics-card metrics-card-profile" src="./assets/metrics.general.svg" width="390" height="auto" alt="Luan's GitHub profile summary" loading="lazy"/>
+        </a>
+        <a href="https://github.com/luabagg/orcgen" target="_blank" rel="noopener noreferrer">
+            <img class="metrics-card metrics-card-project" src="./assets/metrics.repo.orcgen.svg" width="390" height="auto" alt="orcgen project metrics" loading="lazy"/>
+        </a>
+        <a href="https://github.com/gearpoint/filepoint" target="_blank" rel="noopener noreferrer">
+            <img class="metrics-card metrics-card-project" src="./assets/metrics.repo.filepoint.svg" width="390" height="auto" alt="filepoint project metrics" loading="lazy"/>
+        </a>
+        <a href="https://github.com/luabagg/obsidian-statistics-vault" target="_blank" rel="noopener noreferrer">
+            <img class="metrics-card metrics-card-project" src="./assets/metrics.repo.obsidian-statistics-vault.svg" width="390" height="auto" alt="obsidian-statistics-vault project metrics" loading="lazy"/>
+        </a>
     </div>
 </div>

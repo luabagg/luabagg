@@ -4,11 +4,11 @@ on:
   # Daily refresh at 00:00 UTC
   schedule:
     - cron: "0 0 * * *"
-  # Run on pushes to main (so config changes trigger a re-render)
+  # Run on pushes to main so config changes trigger fresh renders.
   push:
     branches:
       - main
-  # Manual trigger from the Actions tab
+  # Manual trigger from the Actions tab.
   workflow_dispatch:
 
 permissions:
@@ -18,29 +18,64 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      # Most-used languages — compact, with byte/percentage details.
-      - name: Languages
+      # Profile summary card, inspired by lowlighter's general.svg layout:
+      # main info, contribution calendar, languages, notable contributions,
+      # and starred topics.
+      - name: Profile summary
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          filename: assets/metrics.languages.svg
-          base: ""
+          filename: assets/metrics.general.svg
           template: classic
           config_display: columns
+          base: header
+          plugin_isocalendar: yes
           plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_details: lines, bytes-size, percentage
           plugin_languages_ignored: html, css, less, scss, dockerfile, makefile, cmake, shell, gnuplot
-          plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 6
+          plugin_languages_recent_load: 400
+          plugin_languages_recent_days: 14
+          plugin_notable: yes
+          plugin_notable_from: organization
+          plugin_notable_types: commit
+          plugin_topics: yes
+          plugin_topics_mode: icons
+          plugin_topics_limit: 12
 
-      # Pinned / featured repositories — matches the repos currently pinned on
-      # github.com/luabagg (kept in sync with profile pinned items).
-      - name: Pinned repositories
+      # Keep project cards separate so each image can be wrapped in its own
+      # clickable README link. Links inside SVG <img> embeds cannot work on GitHub.
+      - name: Project card - orcgen
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          filename: assets/metrics.repositories.svg
-          base: ""
+          filename: assets/metrics.repo.orcgen.svg
           template: classic
           config_display: columns
+          base: ""
           plugin_repositories: yes
-          plugin_repositories_featured: luabagg/orcgen, gearpoint/filepoint, luabagg/obsidian-statistics-vault, luabagg/agent-skills
+          plugin_repositories_featured: luabagg/orcgen
+
+      - name: Project card - filepoint
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/metrics.repo.filepoint.svg
+          template: classic
+          config_display: columns
+          base: ""
+          plugin_repositories: yes
+          plugin_repositories_featured: gearpoint/filepoint
+
+      - name: Project card - obsidian-statistics-vault
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: assets/metrics.repo.obsidian-statistics-vault.svg
+          template: classic
+          config_display: columns
+          base: ""
+          plugin_repositories: yes
+          plugin_repositories_featured: luabagg/obsidian-statistics-vault
