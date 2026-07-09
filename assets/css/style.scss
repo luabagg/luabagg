@@ -666,6 +666,7 @@ h3 {
   img[src*="metrics"] {
     margin: 0.35rem 0.35rem 0.35rem 0;
     border-radius: 0.85rem;
+    vertical-align: top;
     @include metrics-img;
   }
 }
@@ -685,7 +686,10 @@ h3 {
 
   .metrics-card,
   img[src*="metrics"] {
-    @include metrics-img(360px);
+    display: block;
+    width: min(100%, 420px);
+    height: auto;
+    margin: 0;
   }
 }
 

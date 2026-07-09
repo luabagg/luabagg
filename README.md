@@ -35,9 +35,9 @@
 <div class="github-stats-block">
     <h2>GitHub Stats and Projects 📌</h2>
     <div class="stats-grid">
-        <img class="metrics-card metrics-card-profile" src="./assets/metrics.profile.svg" width="420" height="auto" alt="Luan's GitHub profile metrics" loading="lazy"/>
-        <img class="metrics-card metrics-card-isocalendar" src="./assets/metrics.isocalendar.svg" width="420" height="auto" alt="Luan's half-year commit graph" loading="lazy"/>
-        <img class="metrics-card metrics-card-languages" src="./assets/metrics.languages.svg" width="420" height="auto" alt="Luan's most-used languages" loading="lazy"/>
-        <img class="metrics-card metrics-card-repositories" src="./assets/metrics.repositories.svg" width="420" height="auto" alt="Luan's featured repositories" loading="lazy"/>
+        <img class="metrics-card metrics-card-profile" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.profile.svg" width="420" alt="Luan's GitHub profile metrics" loading="lazy"/>
+        <img class="metrics-card metrics-card-isocalendar" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.isocalendar.svg" width="420" alt="Luan's half-year commit graph" loading="lazy"/>
+        <img class="metrics-card metrics-card-languages" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.languages.svg" width="420" alt="Luan's most-used languages" loading="lazy"/>
+        <img class="metrics-card metrics-card-repositories" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.repositories.svg" width="420" alt="Luan's featured repositories" loading="lazy"/>
     </div>
 </div>
