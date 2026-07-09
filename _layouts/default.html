@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}" data-theme-family="warm" data-theme-scheme="light">
+<html lang="{{ site.lang | default: "en-US" }}" data-theme-family="catppuccin" data-theme-scheme="light">
   <head>
     <meta charset="UTF-8">
     <script>
@@ -9,9 +9,11 @@
           dracula: { schemes: ["dark"], defaultScheme: "dark" },
           warm: { schemes: ["light", "dark"], defaultScheme: "light" }
         };
-        var family = localStorage.getItem("themeFamily") || "warm";
-        var scheme = localStorage.getItem("themeScheme") || "light";
-        if (!registry[family]) family = "warm";
+        var storedFamily = localStorage.getItem("themeFamily");
+        var storedScheme = localStorage.getItem("themeScheme");
+        var family = storedFamily || "catppuccin";
+        var scheme = storedScheme || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        if (!registry[family]) family = "catppuccin";
         var entry = registry[family];
         if (entry.schemes.indexOf(scheme) === -1) scheme = entry.defaultScheme;
         document.documentElement.dataset.themeFamily = family;

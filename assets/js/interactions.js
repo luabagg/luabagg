@@ -154,9 +154,13 @@
 
     const MOBILE_NAV_MAX = 840;
     const isDesktopNav = () => window.innerWidth > MOBILE_NAV_MAX;
+    const getPreferredScheme = () =>
+      window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
 
     const resolveTheme = (family, scheme) => {
-      if (!THEME_REGISTRY[family]) family = "warm";
+      if (!THEME_REGISTRY[family]) family = "catppuccin";
       const entry = THEME_REGISTRY[family];
       if (!entry.schemes.includes(scheme)) scheme = entry.defaultScheme;
       return { family, scheme, entry };
@@ -249,7 +253,7 @@
       else panel.setAttribute("hidden", "");
     };
 
-    applyTheme(root.dataset.themeFamily || "warm", root.dataset.themeScheme || "light", false);
+    applyTheme(root.dataset.themeFamily || "catppuccin", root.dataset.themeScheme || getPreferredScheme(), false);
     setPanelOpen(false);
 
     toggle.addEventListener("click", (event) => {
@@ -263,7 +267,7 @@
       option.addEventListener("click", (event) => {
         event.stopPropagation();
         const nextFamily = option.dataset.themeFamily;
-        const entry = THEME_REGISTRY[nextFamily] || THEME_REGISTRY.warm;
+        const entry = THEME_REGISTRY[nextFamily] || THEME_REGISTRY.catppuccin;
         const currentScheme = root.dataset.themeScheme || "light";
         const nextScheme = entry.schemes.includes(currentScheme)
           ? currentScheme
@@ -275,8 +279,8 @@
     schemeToggle.addEventListener("click", (event) => {
       event.stopPropagation();
       if (schemeToggle.disabled) return;
-      const family = root.dataset.themeFamily || "warm";
-      const entry = THEME_REGISTRY[family] || THEME_REGISTRY.warm;
+      const family = root.dataset.themeFamily || "catppuccin";
+      const entry = THEME_REGISTRY[family] || THEME_REGISTRY.catppuccin;
       if (entry.schemes.length < 2) return;
       const current = root.dataset.themeScheme === "dark" ? "dark" : "light";
       const next = current === "light" ? "dark" : "light";

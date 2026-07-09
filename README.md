@@ -35,9 +35,9 @@
 <div class="github-stats-block">
     <h2>GitHub Stats and Projects 📌</h2>
     <div class="stats-grid">
-        <img class="metrics-card metrics-card-profile" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.profile.svg" width="420" alt="Luan's GitHub profile metrics" loading="lazy"/>
-        <img class="metrics-card metrics-card-isocalendar" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.isocalendar.svg" width="420" alt="Luan's half-year commit graph" loading="lazy"/>
-        <img class="metrics-card metrics-card-languages" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.languages.svg" width="420" alt="Luan's most-used languages" loading="lazy"/>
-        <img class="metrics-card metrics-card-repositories" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.repositories.svg" width="420" alt="Luan's featured repositories" loading="lazy"/>
+        <a href="https://github.com/luabagg" target="_blank" rel="noopener noreferrer"><img class="metrics-card metrics-card-profile" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.profile.svg" width="420" alt="Luan's GitHub profile metrics" loading="lazy"/></a>
+        <a href="https://github.com/luabagg" target="_blank" rel="noopener noreferrer"><img class="metrics-card metrics-card-isocalendar" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.isocalendar.svg" width="420" alt="Luan's half-year commit graph" loading="lazy"/></a>
+        <a href="https://github.com/luabagg" target="_blank" rel="noopener noreferrer"><img class="metrics-card metrics-card-languages" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.languages.svg" width="420" alt="Luan's most-used languages" loading="lazy"/></a>
+        <a href="https://github.com/luabagg?tab=repositories" target="_blank" rel="noopener noreferrer"><img class="metrics-card metrics-card-repositories" src="https://gist.githubusercontent.com/luabagg/8007401f573db713121e843dc955bac2/raw/metrics.repositories.svg" width="420" alt="Luan's featured repositories" loading="lazy"/></a>
     </div>
 </div>
