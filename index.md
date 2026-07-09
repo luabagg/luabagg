@@ -11,11 +11,11 @@ layout: default
 
 <section class="section stack-section" id="languages">
   <div class="section-heading">
-    <p class="eyebrow">Languages and tools</p>
+    <p class="eyebrow">How I build</p>
     <h2>Core stack</h2>
     <p>
-      The toolkit I use for product-critical systems: APIs, async imports,
-      SQL-heavy workflows, observability, and operational interfaces.
+      What I ship on product-critical systems: durable APIs, SQL-heavy data
+      paths, operational UIs, and production observability.
     </p>
   </div>
 
@@ -67,20 +67,20 @@ layout: default
 
     <div class="stack-groups">
       <article>
-        <h3>Backend</h3>
-        <p>Python, Go, Node.js, PHP, Django, FastAPI, Gin Gonic, Express.js, API design, service architecture.</p>
+        <h3>APIs &amp; services</h3>
+        <p>Design and ship durable HTTP/gRPC APIs with clear contracts, auth, and versioning. Daily drivers: Python, Go, Node.</p>
       </article>
       <article>
-        <h3>Frontend</h3>
-        <p>TypeScript, React, Vue, Next.js, Remix, Vite, shadcn/ui, Zustand, Radix UI, React Aria.</p>
+        <h3>Product UI</h3>
+        <p>Build TypeScript React and Vue surfaces that stay usable under real workflows — design systems, forms, and ops consoles.</p>
       </article>
       <article>
-        <h3>Data and async</h3>
-        <p>PostgreSQL, MySQL, Redis, DynamoDB, S3, R, Kafka, Spark, Temporal, BigQuery, query plan analysis.</p>
+        <h3>Data paths</h3>
+        <p>Own SQL-heavy workflows, queues, and idempotent imports. Postgres, Redis, and async jobs under load.</p>
       </article>
       <article>
-        <h3>Infrastructure and ops</h3>
-        <p>AWS, GCP, Kubernetes, Docker, Terraform, CloudWatch, Cloud Logging, Datadog, New Relic, Grafana, Sentry, Incident.io.</p>
+        <h3>Run &amp; observe</h3>
+        <p>Deploy, alert, and debug production. AWS, Docker, metrics, logs, and incident loops that close.</p>
       </article>
     </div>
   </div>
@@ -98,7 +98,7 @@ layout: default
 
   <div class="experience-motion">
     <svg class="experience-path" viewBox="0 0 120 1000" preserveAspectRatio="none" aria-hidden="true">
-      <path id="career-path" d="M60,0 C112,145 8,245 58,390 C112,545 10,665 62,815 C94,905 28,955 60,1000" fill="none" stroke="rgba(140,28,19,0.2)" stroke-width="3" stroke-dasharray="10 10"/>
+      <path id="career-path" d="M60,0 C112,145 8,245 58,390 C112,545 10,665 62,815 C94,905 28,955 60,1000" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="10 10"/>
     </svg>
 
     <ol class="experience-timeline">
@@ -109,11 +109,11 @@ layout: default
             <img src="./images/bling.svg" alt="Bling logo"/>
           </div>
           <div class="experience-body">
-            <div class="timeline-meta">
-              <span>2020 — 2024</span>
-              <span>Software Engineer</span>
+            <div class="experience-title-row">
+              <h3>Bling</h3>
+              <span class="experience-years">2020 — 2024</span>
             </div>
-            <h3>Bling</h3>
+            <span class="experience-role">Software Engineer</span>
             <p>
               Backend and platform work across a large ERP, helping modernize a
               PHP-heavy stack with Go services and a new API version. Co-owned a Go/gRPC/S3
@@ -130,11 +130,11 @@ layout: default
             <img src="./images/gearpoint.svg" alt="Gearpoint logo"/>
           </div>
           <div class="experience-body">
-            <div class="timeline-meta">
-              <span>2023 — 2024</span>
-              <span>Founding Engineer</span>
+            <div class="experience-title-row">
+              <h3>Gearpoint</h3>
+              <span class="experience-years">2023 — 2024</span>
             </div>
-            <h3>Gearpoint</h3>
+            <span class="experience-role">Founding Engineer</span>
             <p>
               Built a car enthusiast social/events platform from zero to 2,000+
               users as founding engineer. Owned Python/Django APIs, Go/Gin
@@ -151,11 +151,11 @@ layout: default
             <img src="./images/yo-lara.jpg" alt="Yo Lara logo"/>
           </div>
           <div class="experience-body">
-            <div class="timeline-meta">
-              <span>2024</span>
-              <span>Software Engineer</span>
+            <div class="experience-title-row">
+              <h3>Yo Lara</h3>
+              <span class="experience-years">2024</span>
             </div>
-            <h3>Yo Lara</h3>
+            <span class="experience-role">Software Engineer</span>
             <p>
               Contributed to a local-first ERP for field-service teams, mainly on
               frontend flows over SQLite, PostgreSQL, and PowerSync. Built service-order
@@ -172,11 +172,11 @@ layout: default
             <img src="./images/athelas.png" alt="Athelas logo"/>
           </div>
           <div class="experience-body">
-            <div class="timeline-meta">
-              <span>2025 — current</span>
-              <span>Software Engineer</span>
+            <div class="experience-title-row">
+              <h3>Athelas</h3>
+              <span class="experience-years">2025 — current</span>
             </div>
-            <h3>Athelas</h3>
+            <span class="experience-role">Software Engineer</span>
             <p>
               Building RCM systems for clinics across eligibility, appointments,
               patient responsibility, and billing workflows. Owned Charge Master
@@ -201,16 +201,11 @@ layout: default
   </div>
 
   <div class="ventures-list">
-    <article class="venture-row venture-gheno">
+    <article class="venture-row venture-gheno venture-featured">
       <div class="venture-logo" aria-hidden="true">
         <img src="./images/gheno-rotors.png" alt=""/>
       </div>
       <div class="venture-panel">
-        <div class="venture-tags" aria-label="GHENO focus areas">
-          <span>DOWNHILL</span>
-          <span>ENDURO</span>
-          <span>E-BIKE</span>
-        </div>
         <div class="venture-kicker">Side business · Brazilian MTB components</div>
         <h3>GHENO</h3>
         <p>

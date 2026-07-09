@@ -1,0 +1,152 @@
+%theme-vars {
+  --line: #{color-mix(in srgb, var(--accent) 18%, transparent)};
+  --header-bg: #{color-mix(in srgb, var(--bg) 82%, transparent)};
+  --stack-gradient: linear-gradient(160deg, var(--surface) 0%, var(--accent-soft) 100%);
+  --path-stroke: #{color-mix(in srgb, var(--accent) 22%, transparent)};
+  --chip-accent-fg: var(--accent);
+  --chip-accent-bg: #{color-mix(in srgb, var(--accent) 12%, transparent)};
+  --chip-accent-border: #{color-mix(in srgb, var(--accent) 28%, transparent)};
+}
+
+%theme-vars-light-surfaces {
+  --tech-icon-bg: #{color-mix(in srgb, var(--surface) 92%, white)};
+  --contact-chip-bg: #{color-mix(in srgb, var(--surface) 82%, white)};
+  --experience-logo-bg: #{color-mix(in srgb, var(--surface) 86%, white)};
+  --tech-pill-from: var(--text);
+  --tech-pill-to: var(--dark-red);
+  --tech-pill-fg: var(--surface);
+  --tech-pill-shadow: #{color-mix(in srgb, var(--dark-red) 22%, transparent)};
+  --tech-pill-shadow-hover: #{color-mix(in srgb, var(--dark-red) 32%, transparent)};
+}
+
+%theme-vars-dark-surfaces {
+  --tech-icon-bg: #{color-mix(in srgb, var(--surface) 82%, var(--bg))};
+  --contact-chip-bg: #{color-mix(in srgb, var(--surface) 88%, var(--bg))};
+  --experience-logo-bg: #{color-mix(in srgb, var(--surface) 90%, var(--bg))};
+  --tech-pill-from: var(--dark-red);
+  --tech-pill-to: #{color-mix(in srgb, var(--dark-red) 70%, black)};
+  --tech-pill-fg: var(--text);
+  --tech-pill-shadow: rgba(0, 0, 0, 0.45);
+  --tech-pill-shadow-hover: rgba(0, 0, 0, 0.55);
+}
+
+:root,
+[data-theme-family="warm"][data-theme-scheme="light"] {
+  --bg: #f8ead0;
+  --surface: #fff4df;
+  --surface-soft: rgba(255, 253, 248, 0.72);
+  --surface-strong: #e9c27f;
+  --text: #3a0e09;
+  --muted: #7a3a2e;
+  --accent: #8c1c13;
+  --accent-soft: #f2cc8f;
+  --dark-red: #5a120b;
+  --media-bg: #e8e4da;
+  --card-line: rgba(221, 214, 200, 0.82);
+  --card-line-soft: rgba(221, 214, 200, 0.55);
+  --shadow: 0 24px 80px rgba(90, 18, 11, 0.14);
+  --lift-shadow: 0 18px 48px rgba(90, 18, 11, 0.1);
+  --body-bg-top: #fcedce;
+  --body-bg-bottom: #f2e0bc;
+  --noise-opacity: 0.1;
+  --theme-color: #f2cc8f;
+  @extend %theme-vars;
+  @extend %theme-vars-light-surfaces;
+}
+
+[data-theme-family="warm"][data-theme-scheme="dark"] {
+  --bg: #2a1410;
+  --surface: #3d1f18;
+  --surface-soft: rgba(61, 31, 24, 0.82);
+  --surface-strong: #6b3a2a;
+  --text: #f8ead0;
+  --muted: #d4a574;
+  --accent: #e85d4c;
+  --accent-soft: #c9a227;
+  --dark-red: #140806;
+  --media-bg: #1f1210;
+  --card-line: rgba(107, 58, 42, 0.65);
+  --card-line-soft: rgba(107, 58, 42, 0.42);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  --lift-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+  --body-bg-top: #1f1210;
+  --body-bg-bottom: #140a08;
+  --noise-opacity: 0.08;
+  --theme-color: #3d1f18;
+  @extend %theme-vars;
+  @extend %theme-vars-dark-surfaces;
+}
+
+/* Catppuccin Latte — official base/text/red/peach */
+[data-theme-family="catppuccin"][data-theme-scheme="light"] {
+  --bg: #eff1f5;
+  --surface: #e6e9ef;
+  --surface-soft: rgba(230, 233, 239, 0.9);
+  --surface-strong: #ccd0da;
+  --text: #4c4f69;
+  --muted: #6c6f85;
+  --accent: #d20f39;
+  --accent-soft: #fe640b;
+  --dark-red: #4c4f69;
+  --media-bg: #dce0e8;
+  --card-line: rgba(156, 160, 176, 0.55);
+  --card-line-soft: rgba(156, 160, 176, 0.35);
+  --shadow: 0 24px 80px rgba(76, 79, 105, 0.12);
+  --lift-shadow: 0 18px 48px rgba(76, 79, 105, 0.08);
+  --body-bg-top: #eff1f5;
+  --body-bg-bottom: #e6e9ef;
+  --noise-opacity: 0.1;
+  --theme-color: #e6e9ef;
+  @extend %theme-vars;
+  @extend %theme-vars-light-surfaces;
+}
+
+/* Catppuccin Mocha — official base/text/pink/peach */
+[data-theme-family="catppuccin"][data-theme-scheme="dark"] {
+  --bg: #1e1e2e;
+  --surface: #313244;
+  --surface-soft: rgba(49, 50, 68, 0.86);
+  --surface-strong: #45475a;
+  --text: #cdd6f4;
+  --muted: #a6adc8;
+  --accent: #f38ba8;
+  --accent-soft: #fab387;
+  --dark-red: #11111b;
+  --media-bg: #181825;
+  --card-line: rgba(69, 71, 90, 0.75);
+  --card-line-soft: rgba(69, 71, 90, 0.45);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --lift-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --body-bg-top: #181825;
+  --body-bg-bottom: #11111b;
+  --noise-opacity: 0.08;
+  --theme-color: #313244;
+  @extend %theme-vars;
+  @extend %theme-vars-dark-surfaces;
+}
+
+/* Dracula — dark only (no light variant) */
+[data-theme-family="dracula"],
+[data-theme-family="dracula"][data-theme-scheme="dark"],
+[data-theme-family="dracula"][data-theme-scheme="light"] {
+  --bg: #1e1b2e;
+  --surface: #2a2438;
+  --surface-soft: rgba(42, 36, 56, 0.9);
+  --surface-strong: #322c44;
+  --text: #f8f8f2;
+  --muted: #9b8bb4;
+  --accent: #ff79c6;
+  --accent-soft: #bd93f9;
+  --dark-red: #0f0d16;
+  --media-bg: #161322;
+  --card-line: rgba(101, 88, 130, 0.55);
+  --card-line-soft: rgba(101, 88, 130, 0.32);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
+  --lift-shadow: 0 18px 48px rgba(0, 0, 0, 0.38);
+  --body-bg-top: #2b2140;
+  --body-bg-bottom: #1a1628;
+  --noise-opacity: 0.08;
+  --theme-color: #2a2438;
+  @extend %theme-vars;
+  @extend %theme-vars-dark-surfaces;
+}

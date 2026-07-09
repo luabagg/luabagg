@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "en-US" }}" data-theme-family="warm" data-theme-scheme="light">
   <head>
     <meta charset="UTF-8">
+    <script>
+      (function () {
+        var registry = {
+          catppuccin: { schemes: ["light", "dark"], defaultScheme: "light", labels: { light: "Latte", dark: "Mocha" } },
+          dracula: { schemes: ["dark"], defaultScheme: "dark" },
+          warm: { schemes: ["light", "dark"], defaultScheme: "light" }
+        };
+        var family = localStorage.getItem("themeFamily") || "warm";
+        var scheme = localStorage.getItem("themeScheme") || "light";
+        if (!registry[family]) family = "warm";
+        var entry = registry[family];
+        if (entry.schemes.indexOf(scheme) === -1) scheme = entry.defaultScheme;
+        document.documentElement.dataset.themeFamily = family;
+        document.documentElement.dataset.themeScheme = scheme;
+      })();
+    </script>
     {% seo %}
     <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Saira+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f2cc8f">
+    <meta name="theme-color" content="#f2cc8f" id="meta-theme-color">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
@@ -32,6 +48,30 @@
           <a href="{{ '/' | relative_url }}#ventures">Projects</a>
           <a href="{{ '/' | relative_url }}#education">Education</a>
           <a href="{{ '/' | relative_url }}#contact">Contact</a>
+
+          <div class="theme-menu">
+            <button class="theme-menu-toggle" type="button" aria-expanded="false" aria-controls="theme-menu-panel" aria-haspopup="true" aria-label="Theme">
+              <svg class="theme-menu-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.2 6.2a.75.75 0 0 1 1.06 0L8 8.94l2.74-2.74a.75.75 0 1 1 1.06 1.06l-3.27 3.27a.75.75 0 0 1-1.06 0L4.2 7.26a.75.75 0 0 1 0-1.06Z"/></svg>
+            </button>
+            <div class="theme-menu-panel" id="theme-menu-panel" hidden>
+              <p class="theme-menu-heading">Themes</p>
+              <div class="theme-family-list" role="listbox" aria-label="Color theme">
+                <button type="button" class="theme-family-option" data-theme-family="catppuccin" role="option">Catppuccin</button>
+                <button type="button" class="theme-family-option" data-theme-family="dracula" role="option">Dracula</button>
+                <button type="button" class="theme-family-option" data-theme-family="warm" role="option">Warm</button>
+              </div>
+              <div class="theme-menu-divider" role="separator"></div>
+              <div class="theme-scheme-row" role="group" aria-label="Color scheme">
+                <button type="button" class="theme-scheme-toggle" role="switch" aria-checked="false" data-scheme="light" data-theme-scheme="light" aria-label="Switch to dark mode">
+                  <span class="theme-switch-track" aria-hidden="true">
+                    <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM2 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Zm17 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1ZM4.22 4.22a1 1 0 0 1 1.42 0l.7.7A1 1 0 0 1 4.92 6.34l-.7-.7a1 1 0 0 1 0-1.42Zm14.14 14.14a1 1 0 0 1 1.42 0l.7.7a1 1 0 1 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42ZM4.22 19.78a1 1 0 0 1 0-1.42l.7-.7a1 1 0 1 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0Zm14.14-14.14a1 1 0 0 1 0-1.42l.7-.7a1 1 0 1 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0Z"/></svg>
+                    <span class="theme-switch-thumb"></span>
+                    <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     </header>

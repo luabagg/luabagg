@@ -10,7 +10,7 @@
       items.forEach((item) => item.style.setProperty("--tech-hover-scale", 1));
     });
 
-    items.forEach((item, index) => {
+    items.forEach((item) => {
       item.addEventListener("pointerenter", () => {
         const itemRect = item.getBoundingClientRect();
         const itemCenterX = itemRect.left + itemRect.width / 2;
@@ -121,16 +121,192 @@
     });
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", run);
-  } else {
-    run();
+  function initThemeControls() {
+    const root = document.documentElement;
+    const menu = document.querySelector(".theme-menu");
+    const toggle = document.querySelector(".theme-menu-toggle");
+    const panel = document.getElementById("theme-menu-panel");
+    const familyOptions = [...document.querySelectorAll(".theme-family-option")];
+    const schemeToggle = document.querySelector(".theme-scheme-toggle");
+    const metaTheme = document.getElementById("meta-theme-color");
+    if (!menu || !toggle || !panel || !familyOptions.length || !schemeToggle) return;
+
+    const THEME_REGISTRY = {
+      catppuccin: {
+        label: "Catppuccin",
+        schemes: ["light", "dark"],
+        defaultScheme: "light",
+        schemeLabels: { light: "Latte", dark: "Mocha" },
+      },
+      dracula: {
+        label: "Dracula",
+        schemes: ["dark"],
+        defaultScheme: "dark",
+        schemeLabels: { dark: "Dracula" },
+      },
+      warm: {
+        label: "Warm",
+        schemes: ["light", "dark"],
+        defaultScheme: "light",
+        schemeLabels: { light: "Light", dark: "Dark" },
+      },
+    };
+
+    const MOBILE_NAV_MAX = 840;
+    const isDesktopNav = () => window.innerWidth > MOBILE_NAV_MAX;
+
+    const resolveTheme = (family, scheme) => {
+      if (!THEME_REGISTRY[family]) family = "warm";
+      const entry = THEME_REGISTRY[family];
+      if (!entry.schemes.includes(scheme)) scheme = entry.defaultScheme;
+      return { family, scheme, entry };
+    };
+
+    const syncMetaThemeColor = () => {
+      if (!metaTheme) return;
+      const color = getComputedStyle(root).getPropertyValue("--theme-color").trim();
+      if (color) metaTheme.setAttribute("content", color);
+    };
+
+    const syncSchemeToggleUi = (family, scheme) => {
+      const entry = THEME_REGISTRY[family] || THEME_REGISTRY.warm;
+      const schemeLocked = entry.schemes.length < 2;
+      schemeToggle.dataset.scheme = scheme;
+      schemeToggle.dataset.themeScheme = scheme;
+      schemeToggle.classList.toggle("is-dark", scheme === "dark");
+      schemeToggle.setAttribute("aria-checked", scheme === "dark" ? "true" : "false");
+      schemeToggle.disabled = schemeLocked;
+      schemeToggle.setAttribute("aria-disabled", schemeLocked ? "true" : "false");
+
+      if (schemeLocked) {
+        schemeToggle.setAttribute("aria-label", `${entry.label} is dark only`);
+        return;
+      }
+
+      if (family === "catppuccin") {
+        schemeToggle.setAttribute(
+          "aria-label",
+          scheme === "light" ? "Switch to Mocha" : "Switch to Latte"
+        );
+        return;
+      }
+
+      schemeToggle.setAttribute(
+        "aria-label",
+        scheme === "light" ? "Switch to dark mode" : "Switch to light mode"
+      );
+    };
+
+    const syncFamilyLabels = (family, scheme) => {
+      familyOptions.forEach((option) => {
+        const optionFamily = option.dataset.themeFamily;
+        const entry = THEME_REGISTRY[optionFamily];
+        if (!entry) return;
+        const active = optionFamily === family;
+        option.classList.toggle("is-active", active);
+        option.setAttribute("aria-selected", active ? "true" : "false");
+
+        if (optionFamily === "catppuccin") {
+          const flavor = active
+            ? entry.schemeLabels[scheme] || entry.schemeLabels[entry.defaultScheme]
+            : null;
+          option.textContent = flavor ? `Catppuccin · ${flavor}` : "Catppuccin";
+          return;
+        }
+
+        option.textContent = entry.label;
+      });
+    };
+
+    const syncUi = (family, scheme) => {
+      syncFamilyLabels(family, scheme);
+      syncSchemeToggleUi(family, scheme);
+    };
+
+    const applyTheme = (family, scheme, persist) => {
+      const resolved = resolveTheme(family, scheme);
+      root.dataset.themeFamily = resolved.family;
+      root.dataset.themeScheme = resolved.scheme;
+      syncUi(resolved.family, resolved.scheme);
+      syncMetaThemeColor();
+      if (persist) {
+        localStorage.setItem("themeFamily", resolved.family);
+        localStorage.setItem("themeScheme", resolved.scheme);
+      }
+    };
+
+    const setPanelOpen = (open) => {
+      if (!isDesktopNav()) {
+        toggle.setAttribute("aria-expanded", "false");
+        menu.classList.remove("is-open");
+        panel.removeAttribute("hidden");
+        return;
+      }
+
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      menu.classList.toggle("is-open", open);
+      if (open) panel.removeAttribute("hidden");
+      else panel.setAttribute("hidden", "");
+    };
+
+    applyTheme(root.dataset.themeFamily || "warm", root.dataset.themeScheme || "light", false);
+    setPanelOpen(false);
+
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (!isDesktopNav()) return;
+      const open = toggle.getAttribute("aria-expanded") !== "true";
+      setPanelOpen(open);
+    });
+
+    familyOptions.forEach((option) => {
+      option.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const nextFamily = option.dataset.themeFamily;
+        const entry = THEME_REGISTRY[nextFamily] || THEME_REGISTRY.warm;
+        const currentScheme = root.dataset.themeScheme || "light";
+        const nextScheme = entry.schemes.includes(currentScheme)
+          ? currentScheme
+          : entry.defaultScheme;
+        applyTheme(nextFamily, nextScheme, true);
+      });
+    });
+
+    schemeToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (schemeToggle.disabled) return;
+      const family = root.dataset.themeFamily || "warm";
+      const entry = THEME_REGISTRY[family] || THEME_REGISTRY.warm;
+      if (entry.schemes.length < 2) return;
+      const current = root.dataset.themeScheme === "dark" ? "dark" : "light";
+      const next = current === "light" ? "dark" : "light";
+      applyTheme(family, next, true);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (isDesktopNav() && !menu.contains(event.target)) setPanelOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && isDesktopNav()) setPanelOpen(false);
+    });
+
+    window.addEventListener("resize", () => {
+      setPanelOpen(false);
+    });
   }
 
   function run() {
+    initThemeControls();
     initNavToggle();
     initTechCloud();
     initExperienceTimeline();
     initSecretRoomTilt();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", run);
+  } else {
+    run();
   }
 })();
