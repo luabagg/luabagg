@@ -19,8 +19,8 @@ $lift-shadow: 0 18px 48px rgba(90, 18, 11, 0.1);
 $sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 $display: "Saira Condensed", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
 $mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
-$container: min(1120px, calc(100% - 2rem));
-$container-sm: min(100% - 2.5rem, 1120px);
+$container: min(980px, calc(100% - 3rem));
+$container-sm: min(100% - 2rem, 980px);
 $fast: 180ms ease;
 $lift: 220ms ease;
 $pill: 999px;
@@ -113,6 +113,16 @@ $noise-svg: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://w
   }
 }
 
+@mixin metrics-img($width: null) {
+  max-width: 100%;
+  height: auto;
+  @if $width {
+    display: block;
+    width: $width;
+    margin: 0;
+  }
+}
+
 %container { @include container; }
 %muted-copy { max-width: 65ch; color: var(--muted); }
 %surface-card { @include card; }
@@ -133,8 +143,8 @@ body {
     linear-gradient(180deg, #fcedce 0%, var(--bg) 42%, #f2e0bc 100%);
   color: var(--text);
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.6;
 
   &::before {
     content: "";
@@ -164,18 +174,18 @@ h1, h2, h3, p { margin-top: 0; }
 
 h1 {
   max-width: 14ch;
-  margin-bottom: 1.35rem;
-  @include display-type(clamp(3.25rem, 10vw, 9rem), 0.88, -0.03em);
+  margin-bottom: 0.85rem;
+  @include display-type(clamp(2.75rem, 8vw, 7.25rem), 0.88, -0.06em);
 }
 
 h2 {
-  margin-bottom: 0.75rem;
-  @include display-type(clamp(2.25rem, 5vw, 4.5rem), 0.92, -0.02em);
+  margin-bottom: 0.5rem;
+  @include display-type(clamp(1.95rem, 4.2vw, 3.65rem), 0.92, -0.05em);
 }
 
 h3 {
-  margin-bottom: 0.55rem;
-  @include display-type(1.35rem, 1.05, -0.01em);
+  margin-bottom: 0.35rem;
+  @include display-type(1.15rem, 1.05, -0.03em);
 }
 
 #skip-to-content {
@@ -256,7 +266,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 180ms ease;
+    transition: opacity $fast;
   }
 
   &-bars {
@@ -285,40 +295,32 @@ h3 {
 }
 
 .readme-section {
-  padding: clamp(3rem, 8vw, 6rem) 0;
+  padding: clamp(2rem, 4.6vw, 3.8rem) 0;
 
   > div:first-child {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 15rem;
-    column-gap: clamp(2rem, 7vw, 5rem);
+    grid-template-columns: minmax(0, 1fr) 12rem;
+    column-gap: clamp(1.5rem, 5vw, 3.5rem);
     align-items: start;
 
-    > br { display: none; }
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
+    br { display: none; }
   }
 
   h1 {
-    max-width: 14ch;
-    margin-bottom: 1.5rem;
-    font-size: clamp(3rem, 8vw, 6.25rem);
+    font-size: clamp(2.45rem, 6.4vw, 5rem);
     line-height: 0.95;
-    letter-spacing: -0.075em;
+    letter-spacing: -0.095em;
   }
 
   h2 {
-    margin-top: 2.5rem;
-    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    margin-top: 1.25rem;
+    font-size: clamp(1.45rem, 2.4vw, 2.2rem);
   }
 
   p {
     max-width: 62ch;
     color: var(--muted);
-    font-size: clamp(1.05rem, 2vw, 1.22rem);
+    font-size: clamp(0.98rem, 1.55vw, 1.08rem);
   }
 
   .profile-image-link {
@@ -329,13 +331,11 @@ h3 {
 
   .profile-image-link img {
     display: block;
-    width: 15rem;
-    max-width: 100%;
-    height: auto;
-    float: none;
+    width: 12rem;
     margin: 0;
     border-radius: 1rem;
     box-shadow: var(--shadow);
+    @include metrics-img;
   }
 
   .intro-copy,
@@ -353,7 +353,7 @@ h3 {
 
   .github-stats-block {
     grid-column: 1 / -1;
-    margin-top: 3.5rem;
+    margin-top: 1.85rem;
   }
 
   .readme-badges {
@@ -395,11 +395,11 @@ h3 {
     }
   }
 
-  img[src*="github-readme-stats"] {
-    max-width: 100%;
-    height: auto;
+  .metrics-card,
+  img[src*="metrics"] {
     margin: 0.35rem 0.35rem 0.35rem 0;
     border-radius: 0.85rem;
+    @include metrics-img;
   }
 }
 
@@ -408,7 +408,7 @@ h3 {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-evenly;
-  gap: 0.75rem;
+  gap: 0.55rem;
   width: 100%;
 
   a {
@@ -416,17 +416,14 @@ h3 {
     line-height: 0;
   }
 
-  img[src*="github-readme-stats"] {
-    display: block;
-    width: auto;
-    height: clamp(6.75rem, 11vw, 7.5rem);
-    max-width: 100%;
-    margin: 0;
+  .metrics-card,
+  img[src*="metrics"] {
+    @include metrics-img(360px);
   }
 }
 
 .eyebrow {
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -436,29 +433,33 @@ h3 {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 2.85rem 0;
   border-top: 1px solid var(--line);
+}
+
+.readme-section + .section {
+  padding-top: 1.45rem;
 }
 
 .section-heading {
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(18rem, 1fr);
-  gap: 2rem;
+  grid-template-columns: minmax(0, 0.78fr) minmax(16rem, 1fr);
+  gap: 1rem;
   align-items: end;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   p { @extend %muted-copy; }
 
   .eyebrow {
     grid-column: 1 / -1;
-    margin-bottom: -1rem;
+    margin-bottom: -0.65rem;
   }
 }
 
 .stack-layout,
-.education-grid { display: grid; gap: 1rem; }
+.education-grid { display: grid; gap: 0.8rem; }
 
-.stack-layout { grid-template-columns: minmax(18rem, 0.82fr) minmax(0, 1.18fr); }
+.stack-layout { grid-template-columns: minmax(16rem, 0.82fr) minmax(0, 1.18fr); }
 .education-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .secret-grid {
   column-count: 3;
@@ -473,18 +474,18 @@ h3 {
 .stack-feature {
   position: relative;
   display: flex;
-  min-height: 24rem;
+  min-height: 19rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-color: rgba($accent, 0.28);
-  border-radius: 2rem;
+  border-radius: 1.55rem;
   background:
     radial-gradient(circle at 20% 18%, rgba($accent-soft, 0.82), transparent 42%),
     radial-gradient(circle at 88% 82%, rgba($accent, 0.16), transparent 48%),
     $warm-gradient;
-  padding: 1.35rem;
+  padding: 1rem;
 
   &::before {
     content: "";
@@ -507,7 +508,7 @@ h3 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
+  gap: 0.48rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -517,7 +518,7 @@ h3 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.45rem;
+    gap: 0.34rem;
     border: 1px solid rgba($accent-soft, 0.25);
     border-radius: $pill;
     background: linear-gradient(145deg, rgba($text, 0.96), rgba($dark-red, 0.92));
@@ -542,8 +543,8 @@ h3 {
       display: block;
       width: var(--tech-icon-size);
       height: var(--tech-icon-size);
-      padding: 0.18rem;
-      border-radius: 0.45rem;
+      padding: 0.14rem;
+      border-radius: 0.36rem;
       background: rgba(255, 253, 248, 0.92);
       object-fit: contain;
 
@@ -560,36 +561,36 @@ h3 {
   }
 
   &-item-large {
-    --tech-icon-size: 2rem;
-    min-height: 3.4rem;
-    padding: 0.55rem 1.15rem;
-    font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+    --tech-icon-size: 1.6rem;
+    min-height: 2.75rem;
+    padding: 0.42rem 0.9rem;
+    font-size: clamp(1.08rem, 2.25vw, 1.48rem);
   }
 
   &-item-medium {
-    --tech-icon-size: 1.55rem;
-    min-height: 2.85rem;
-    padding: 0.45rem 0.95rem;
-    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    --tech-icon-size: 1.24rem;
+    min-height: 2.28rem;
+    padding: 0.34rem 0.72rem;
+    font-size: clamp(0.88rem, 1.6vw, 1.08rem);
   }
 
   &-item-small {
-    --tech-icon-size: 1.2rem;
-    min-height: 2.35rem;
-    padding: 0.35rem 0.75rem;
-    font-size: clamp(0.86rem, 1.5vw, 1rem);
+    --tech-icon-size: 0.96rem;
+    min-height: 1.9rem;
+    padding: 0.26rem 0.58rem;
+    font-size: clamp(0.74rem, 1.2vw, 0.82rem);
   }
 }
 
 .stack-groups {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.8rem;
 
   article {
-    min-height: 13rem;
-    border-radius: 1.35rem;
-    padding: 1.2rem;
+    min-height: 10.5rem;
+    border-radius: 1.1rem;
+    padding: 0.95rem;
   }
 
   p { @extend %muted-copy; }
@@ -601,19 +602,17 @@ h3 {
   position: absolute;
   top: 0;
   left: 50%;
-  width: clamp(7rem, 12vw, 10rem);
+  width: clamp(5.5rem, 9.5vw, 8rem);
   height: 100%;
   transform: translateX(-50%);
   pointer-events: none;
   overflow: visible;
 }
 
-.experience-node { position: absolute; border-radius: $pill; pointer-events: none; }
-
 .experience-timeline {
   position: relative;
   display: grid;
-  gap: 2rem;
+  gap: 1.35rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -625,17 +624,17 @@ h3 {
   --experience-node-scale: 1;
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 5.5rem minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 4.4rem minmax(0, 1fr);
   align-items: start;
 
   .experience-card { grid-column: 3; }
 
   &:nth-child(even) .experience-card { grid-column: 1; }
 
-  &:nth-child(1) { --experience-card-x: 1.15rem; --experience-node-x: 0.8rem; }
-  &:nth-child(2) { --experience-card-x: -1.35rem; --experience-node-x: -1rem; }
-  &:nth-child(3) { --experience-card-x: -0.65rem; --experience-node-x: 0.9rem; }
-  &:nth-child(4) { --experience-card-x: 0.9rem; --experience-node-x: -0.7rem; }
+  &:nth-child(1) { --experience-card-x: 0.9rem; --experience-node-x: 0.6rem; }
+  &:nth-child(2) { --experience-card-x: -1.05rem; --experience-node-x: -0.8rem; }
+  &:nth-child(3) { --experience-card-x: -0.5rem; --experience-node-x: 0.7rem; }
+  &:nth-child(4) { --experience-card-x: 0.7rem; --experience-node-x: -0.55rem; }
 
   &.is-complete,
   &.is-active {
@@ -662,9 +661,9 @@ h3 {
 
 .experience-node {
   left: calc(50% + var(--experience-node-x));
-  top: 1.6rem;
-  width: 0.85rem;
-  height: 0.85rem;
+  top: 1.25rem;
+  width: 0.68rem;
+  height: 0.68rem;
   transform: translateX(-50%) scale(var(--experience-node-scale));
   border: 2px solid var(--accent);
   background: var(--surface);
@@ -701,22 +700,22 @@ h3 {
 }
 
 .experience-media {
-  flex: 0 0 13rem;
+  flex: 0 0 10.5rem;
   @include media-box(0, none);
 }
 
 .experience-logo {
-  flex: 0 0 13rem;
+  flex: 0 0 10.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1.15rem;
   border-right: 1px solid $card-line-soft;
   background: rgba(255, 253, 248, 0.86);
 
   img {
-    max-width: 6rem;
-    max-height: 4rem;
+    max-width: 4.8rem;
+    max-height: 3.2rem;
     object-fit: contain;
   }
 }
@@ -726,17 +725,17 @@ h3 {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  padding: 1.35rem;
+  gap: 0.45rem;
+  padding: 1rem;
 
-  h3 { font-size: clamp(1.5rem, 2.6vw, 2.5rem); }
+  h3 { font-size: clamp(1.2rem, 2.05vw, 2rem); }
   p { max-width: 58ch; color: var(--muted); }
 }
 
 .timeline-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.36rem;
   align-items: center;
 
   span { @include pill-text; }
@@ -746,17 +745,17 @@ h3 {
 
 .ventures-list {
   display: grid;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .venture-row {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.32fr);
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, 0.3fr);
   align-items: stretch;
   overflow: hidden;
   border: 1px solid rgba($accent, 0.24);
-  border-radius: 1.45rem;
+  border-radius: 1.15rem;
   background:
     radial-gradient(circle at 12% 18%, rgba($accent-soft, 0.5), transparent 18rem),
     rgba($surface, 0.72);
@@ -774,15 +773,15 @@ h3 {
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  padding: 1.5rem;
+  padding: 1.15rem;
   background:
     linear-gradient(135deg, rgba($surface, 0.74), rgba($accent-soft, 0.32)),
     $noise-svg;
 
   img {
     display: block;
-    width: min(100%, 12rem);
-    max-height: 5rem;
+    width: min(100%, 9.5rem);
+    max-height: 4rem;
     object-fit: contain;
   }
 }
@@ -792,14 +791,14 @@ h3 {
   grid-column: 1;
   grid-row: 1;
   display: flex;
-  min-height: 10rem;
+  min-height: 8rem;
   flex-direction: column;
   justify-content: center;
-  gap: 0.55rem;
+  gap: 0.42rem;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 1.15rem;
 
-  h3 { font-size: clamp(1.45rem, 2.8vw, 2.6rem); }
+  h3 { font-size: clamp(1.15rem, 2.2vw, 2rem); }
   p { max-width: 66ch; color: var(--muted); }
 
   a {
@@ -826,13 +825,13 @@ h3 {
 }
 
 .venture-gheno .venture-logo img {
-  width: min(100%, 13rem);
+  width: min(100%, 10.25rem);
   filter: drop-shadow(0 10px 24px rgba($accent, 0.18));
 }
 
 .venture-warm .venture-logo img {
-  width: min(100%, 12rem);
-  max-height: 5rem;
+  width: min(100%, 9.5rem);
+  max-height: 4rem;
 }
 
 .venture-tags {
@@ -849,7 +848,7 @@ h3 {
 }
 
 .education-card {
-  padding: 1.35rem;
+  padding: 1rem;
 
   p { @extend %muted-copy; }
 
@@ -857,9 +856,9 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.55rem;
 
-    h3 { font-size: 1.8rem; }
+    h3 { font-size: 1.45rem; }
   }
 }
 
@@ -872,7 +871,7 @@ h3 {
   span {
     color: var(--muted);
     font-family: var(--font-display);
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -890,13 +889,13 @@ h3 {
 .education-degree {
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.6rem;
 }
 
 .education-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.3rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -907,7 +906,7 @@ h3 {
 .contact-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.4rem;
   width: fit-content;
   max-width: 100%;
   list-style: none;
@@ -917,8 +916,8 @@ h3 {
   a {
     display: inline-flex;
     align-items: center;
-    gap: 0.42rem;
-    padding: 0.45rem 0.7rem;
+    gap: 0.32rem;
+    padding: 0.34rem 0.55rem;
     border: 1px solid rgba($text, 0.1);
     border-radius: 999px;
     background: rgba(#fff, 0.82);
@@ -928,8 +927,8 @@ h3 {
   }
 
   svg {
-    width: 1rem;
-    height: 1rem;
+    width: 0.85rem;
+    height: 0.85rem;
     flex: 0 0 auto;
     fill: var(--accent);
   }
@@ -937,7 +936,7 @@ h3 {
   strong {
     overflow-wrap: anywhere;
     color: $text;
-    font-size: 0.82rem;
+    font-size: 0.74rem;
     font-weight: 700;
   }
 }
@@ -946,10 +945,10 @@ h3 {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 2rem 0 3rem;
+  padding: 1.5rem 0 2.25rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
 }
 
 .secret-room { padding-top: 3rem; }
@@ -1047,8 +1046,8 @@ h3 {
   .experience-logo {
     flex: 0 0 auto;
     width: 100%;
-    min-height: 8rem;
-    max-height: 12rem;
+    min-height: 6.5rem;
+    max-height: 9.5rem;
     border-right: none;
     border-bottom: 1px solid $card-line-soft;
   }
@@ -1067,7 +1066,7 @@ h3 {
       grid-column: 1;
       max-width: none;
       margin-bottom: 0;
-      font-size: clamp(2.4rem, 12vw, 4rem);
+      font-size: clamp(2rem, 10vw, 3.3rem);
     }
 
     .profile-image-link {
@@ -1077,7 +1076,7 @@ h3 {
     }
 
     .profile-image-link img {
-      width: clamp(6rem, 22vw, 8rem);
+      width: clamp(5rem, 18vw, 6.5rem);
       margin: 0;
     }
 
@@ -1090,11 +1089,11 @@ h3 {
 
     .readme-socials {
       max-width: 100%;
-      margin: 1.25rem 0 0;
+      margin: 0.95rem 0 0;
       justify-self: end;
     }
 
-    .github-stats-block { margin-top: 2.5rem; }
+    .github-stats-block { margin-top: 1.5rem; }
 
     .intro-copy,
     .core-stack-badges { width: 100%; }
@@ -1108,7 +1107,7 @@ h3 {
     transform: none;
   }
 
-  .experience-timeline { padding-left: 2.5rem; }
+  .experience-timeline { padding-left: 2rem; }
 
   .experience-entry {
     --experience-card-x: 0rem;
@@ -1129,23 +1128,23 @@ h3 {
   }
 
   .experience-node {
-    left: -1.6rem;
+    left: -1.35rem;
     transform: scale(var(--experience-node-scale));
   }
 
   .venture-row {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 0.55rem;
   }
 
   .venture-logo {
-    min-height: 6rem;
+    min-height: 4.8rem;
     border-bottom: 1px solid rgba($accent, 0.14);
   }
 
   .venture-panel {
     min-height: auto;
-    padding: 1.2rem;
+    padding: 0.95rem;
   }
 }
 
@@ -1155,7 +1154,9 @@ h3 {
   .site-footer { width: $container-sm; }
 
   .site-nav a { padding-inline: 0.55rem; }
-  .section { padding: 3.5rem 0; }
+  .section { padding: 2.1rem 0; }
+
+  .readme-section + .section { padding-top: 1.2rem; }
 
   .stack-feature,
   .stack-groups article,

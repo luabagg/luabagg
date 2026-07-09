@@ -35,12 +35,9 @@
 <div class="github-stats-block">
     <h2>GitHub Stats and Projects 📌</h2>
     <div class="stats-grid">
-        <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=luabagg&hide=html&layout=compact&theme=cobalt" alt="luabagg stats"/>
-        <a href="https://github.com/luabagg/orcgen" target="_blank">
-            <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=luabagg&repo=orcgen&theme=cobalt" alt="orcgen repo"/>
-        </a>
-        <a href="https://github.com/gearpoint/filepoint" target="_blank">
-            <img height="150px" width="335px" src="https://github-readme-stats.vercel.app/api/pin/?username=gearpoint&repo=filepoint&theme=cobalt" alt="filepoint repo"/>
-        </a>
+        <img class="metrics-card metrics-card-profile" src="./assets/metrics.profile.svg" width="420" height="auto" alt="Luan's GitHub profile metrics" loading="lazy"/>
+        <img class="metrics-card metrics-card-isocalendar" src="./assets/metrics.isocalendar.svg" width="420" height="auto" alt="Luan's half-year commit graph" loading="lazy"/>
+        <img class="metrics-card metrics-card-languages" src="./assets/metrics.languages.svg" width="420" height="auto" alt="Luan's most-used languages" loading="lazy"/>
+        <img class="metrics-card metrics-card-repositories" src="./assets/metrics.repositories.svg" width="420" height="auto" alt="Luan's featured repositories" loading="lazy"/>
     </div>
 </div>
