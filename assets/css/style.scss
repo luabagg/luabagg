@@ -115,7 +115,6 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 85% 8%, color-mix(in srgb, var(--accent-soft) 55%, transparent), transparent 34rem),
     radial-gradient(circle at 12% 25%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 26rem),
     linear-gradient(180deg, var(--body-bg-top) 0%, var(--bg) 42%, var(--body-bg-bottom) 100%);
   color: var(--text);
@@ -345,11 +344,24 @@ h3 {
   text-transform: uppercase;
   opacity: 1;
 
+  &[data-theme-family="dracula"] {
+    color: #ff79c6;
+    -webkit-text-fill-color: #ff79c6;
+  }
+
   &:hover {
     border-color: color-mix(in srgb, var(--accent) 22%, transparent);
     background: color-mix(in srgb, var(--accent) 8%, transparent);
     color: var(--accent);
     -webkit-text-fill-color: var(--accent);
+  }
+
+  &[data-theme-family="dracula"]:hover,
+  &[data-theme-family="dracula"].is-active {
+    border-color: color-mix(in srgb, #ff79c6 34%, transparent);
+    background: color-mix(in srgb, #ff79c6 12%, transparent);
+    color: #ff79c6;
+    -webkit-text-fill-color: #ff79c6;
   }
 
   &.is-active {
@@ -693,16 +705,6 @@ h3 {
   }
 }
 
-.eyebrow {
-  margin: 0 0 0.75rem;
-  color: var(--accent);
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .section {
   padding: 2.85rem 0;
   border-top: 1px solid var(--line);
@@ -720,11 +722,6 @@ h3 {
   margin-bottom: 1rem;
 
   p { @extend %muted-copy; }
-
-  .eyebrow {
-    grid-column: 1 / -1;
-    margin-bottom: -0.65rem;
-  }
 }
 
 .stack-section {
@@ -781,8 +778,7 @@ h3 {
 }
 
 .stack-label,
-.timeline-meta,
-.venture-kicker { @extend %label; }
+.timeline-meta { @extend %label; }
 
 .tech-cloud {
   position: relative;
@@ -887,6 +883,12 @@ h3 {
   p { @extend %muted-copy; }
 }
 
+.experience-section {
+  .section-heading {
+    margin-bottom: 0.45rem;
+  }
+}
+
 .experience-motion { position: relative; }
 
 .experience-path {
@@ -908,7 +910,7 @@ h3 {
 .experience-timeline {
   position: relative;
   display: grid;
-  gap: 1.35rem;
+  gap: 0;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -922,6 +924,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 5rem minmax(0, 1fr);
   align-items: start;
+  margin-block: -0.55rem;
 
   .experience-card { grid-column: 3; }
 
@@ -949,8 +952,6 @@ h3 {
       border-color: color-mix(in srgb, var(--accent) 42%, transparent);
       box-shadow: 0 18px 48px color-mix(in srgb, var(--accent) 13%, transparent);
       transform: translateX(var(--experience-card-x)) translateY(var(--experience-card-y));
-
-      &::before { opacity: 1; }
     }
   }
 }
@@ -978,23 +979,9 @@ h3 {
   flex-direction: row;
   transform: translateX(var(--experience-card-x)) translateY(var(--experience-card-y));
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0;
-    background:
-      radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--accent-soft) 35%, transparent), transparent 50%),
-      radial-gradient(circle at 80% 80%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 45%);
-    transition: opacity 300ms ease;
-  }
-
   &:hover {
     --experience-card-y: -3px;
     transform: translateX(var(--experience-card-x)) translateY(var(--experience-card-y));
-
-    &::before { opacity: 1; }
   }
 }
 
@@ -1024,13 +1011,17 @@ h3 {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.2rem;
   padding: 1rem;
 
-  h3 { font-size: clamp(1.2rem, 2.05vw, 2rem); }
+  h3 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2.05vw, 2rem);
+  }
 
   p {
     max-width: 58ch;
+    margin-top: 0.2rem;
     color: var(--muted);
     text-align: justify;
     text-align-last: left;
@@ -1039,12 +1030,11 @@ h3 {
   }
 }
 
-.experience-title-row {
+.experience-meta-row {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.35rem;
 }
 
 .experience-years {
@@ -1058,9 +1048,12 @@ h3 {
 }
 
 .experience-role {
-  align-self: flex-start;
-  margin-bottom: 0.65rem;
-  @include pill-text(var(--chip-accent-fg), var(--chip-accent-bg), var(--chip-accent-border));
+  color: var(--chip-accent-fg);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .timeline-meta {
@@ -1093,12 +1086,16 @@ h3 {
 
 .venture-featured {
   border-color: color-mix(in srgb, var(--accent) 28%, transparent);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--accent) 14%, transparent);
   background:
     radial-gradient(circle at 12% 18%, color-mix(in srgb, var(--accent-soft) 50%, transparent), transparent 18rem),
     color-mix(in srgb, var(--surface) 72%, transparent);
 }
 
 .venture-logo {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1106,20 +1103,42 @@ h3 {
   padding: 0.85rem;
   border-left: 1px solid var(--card-line-soft);
   background: var(--experience-logo-bg);
+  text-decoration: none;
+  color: inherit;
+  transition: background $fast, border-color $fast;
 
   img {
     display: block;
     width: min(100%, 9.5rem);
     max-height: 4rem;
     object-fit: contain;
+    transition: transform $lift;
   }
-}
 
-.venture-featured .venture-logo {
-  border-left-color: color-mix(in srgb, var(--accent) 16%, transparent);
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--surface) 74%, transparent), color-mix(in srgb, var(--accent-soft) 32%, transparent)),
-    $noise-svg;
+  &::after {
+    content: "↗";
+    position: absolute;
+    top: 0.55rem;
+    right: 0.6rem;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.72;
+    transition: opacity $fast, transform $fast;
+  }
+
+  &:hover {
+    background: color-mix(in srgb, var(--experience-logo-bg) 82%, var(--accent-soft));
+
+    img { transform: scale(1.04); }
+
+    &::after {
+      opacity: 1;
+      transform: translate(1px, -1px);
+    }
+  }
 }
 
 .venture-panel {
@@ -1136,12 +1155,6 @@ h3 {
 
   h3 { font-size: clamp(1rem, 1.85vw, 1.55rem); }
   p { max-width: 66ch; color: var(--muted); font-size: 0.92rem; }
-
-  a {
-    width: fit-content;
-    color: var(--accent);
-    font-weight: 700;
-  }
 }
 
 .venture-featured .venture-panel::before {
@@ -1161,13 +1174,7 @@ h3 {
 }
 
 .venture-gheno .venture-logo img {
-  width: min(100%, 10.25rem);
-  filter: drop-shadow(0 10px 24px color-mix(in srgb, var(--accent) 18%, transparent));
-}
-
-.venture-warm .venture-logo img {
-  width: min(100%, 9.5rem);
-  max-height: 4rem;
+  filter: drop-shadow(0 10px 24px color-mix(in srgb, var(--accent) 22%, transparent));
 }
 
 .education-card {
@@ -1488,18 +1495,22 @@ h3 {
   .stack-groups { grid-template-columns: 1fr; }
 
   .experience-path {
-    left: 0.5rem;
-    width: 2rem;
+    left: 0.35rem;
+    width: 1.65rem;
     transform: none;
   }
 
-  .experience-timeline { padding-left: 2rem; }
+  .experience-timeline {
+    gap: 1.1rem;
+    padding-left: 2.85rem;
+  }
 
   .experience-entry {
     --experience-card-x: 0rem;
     --experience-node-x: 0rem;
     --experience-node-scale: 1;
     display: block;
+    margin-block: 0;
 
     &:nth-child(1),
     &:nth-child(2),
@@ -1514,7 +1525,7 @@ h3 {
   }
 
   .experience-node {
-    left: -1.35rem;
+    left: -1.85rem;
     transform: scale(var(--experience-node-scale));
   }
 
@@ -1524,7 +1535,10 @@ h3 {
   }
 
   .venture-logo {
+    grid-column: 1;
+    grid-row: auto;
     min-height: 4.8rem;
+    border-left: 0;
     border-bottom: 1px solid color-mix(in srgb, var(--accent) 14%, transparent);
   }
 

@@ -9,13 +9,111 @@ layout: default
 {{ readme_content | markdownify }}
 </section>
 
+<section class="section experience-section" id="experience">
+  <div class="section-heading">
+    <h2>Where I’ve worked</h2>
+    <p>
+      Experience across healthcare RCM, ERP platforms, a consumer social product,
+      and local-first apps.
+    </p>
+  </div>
+
+  <div class="experience-motion">
+    <svg class="experience-path" viewBox="0 0 120 1000" preserveAspectRatio="none" aria-hidden="true">
+      <path id="career-path" d="M60,0 C112,145 8,245 58,390 C112,545 10,665 62,815 C94,905 28,955 60,1000" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="10 10"/>
+    </svg>
+
+    <ol class="experience-timeline">
+<li class="experience-entry">
+        <span class="experience-node" aria-hidden="true"></span>
+        <article class="experience-card">
+          <div class="experience-logo">
+            <img src="./images/athelas.png" alt="Athelas logo"/>
+          </div>
+          <div class="experience-body">
+            <h3>Athelas</h3>
+            <div class="experience-meta-row">
+              <span class="experience-role">Software Engineer</span>
+              <span class="experience-years">2025 — current</span>
+            </div>
+            <p>
+              Building RCM systems for clinics across eligibility, appointments,
+              patient responsibility, and billing workflows. Owned Charge Master
+              delivery end-to-end, optimized appointment query paths, contributed to
+              rule-engine fixes, and handled production support across critical flows.
+            </p>
+          </div>
+        </article>
+      </li>
+<li class="experience-entry">
+        <span class="experience-node" aria-hidden="true"></span>
+        <article class="experience-card">
+          <div class="experience-logo">
+            <img src="./images/yo-lara.jpg" alt="Yo Lara logo"/>
+          </div>
+          <div class="experience-body">
+            <h3>Yo Lara</h3>
+            <div class="experience-meta-row">
+              <span class="experience-role">Software Engineer</span>
+              <span class="experience-years">2024</span>
+            </div>
+            <p>
+              Contributed to a local-first ERP for field-service teams, mainly on
+              frontend flows over SQLite, PostgreSQL, and PowerSync. Built service-order
+              workflows, centralized imports, and accessible React Aria interfaces.
+            </p>
+          </div>
+        </article>
+      </li>
+<li class="experience-entry">
+        <span class="experience-node" aria-hidden="true"></span>
+        <article class="experience-card">
+          <div class="experience-logo">
+            <img src="./images/gearpoint.svg" alt="Gearpoint logo"/>
+          </div>
+          <div class="experience-body">
+            <h3>Gearpoint</h3>
+            <div class="experience-meta-row">
+              <span class="experience-role">Founding Engineer</span>
+              <span class="experience-years">2023 — 2024</span>
+            </div>
+            <p>
+              Built a car enthusiast social/events platform from zero to 2,000+
+              users as founding engineer. Owned Python/Django APIs, Go/Gin
+              media processing, AWS infra, auth, Stripe, observability, and SQS workflows.
+            </p>
+          </div>
+        </article>
+      </li>
+<li class="experience-entry">
+        <span class="experience-node" aria-hidden="true"></span>
+        <article class="experience-card">
+          <div class="experience-logo">
+            <img src="./images/bling.svg" alt="Bling logo"/>
+          </div>
+          <div class="experience-body">
+            <h3>Bling</h3>
+            <div class="experience-meta-row">
+              <span class="experience-role">Software Engineer</span>
+              <span class="experience-years">2020 — 2024</span>
+            </div>
+            <p>
+              Backend and platform work across a large ERP, helping modernize a
+              PHP-heavy stack with Go services and a new API version. Co-owned a Go/gRPC/S3
+              file service serving 100k+ daily requests and supporting a 40TB+ migration.
+            </p>
+          </div>
+        </article>
+      </li>
+    </ol>
+  </div>
+</section>
+
 <section class="section stack-section" id="languages">
   <div class="section-heading">
-    <p class="eyebrow">How I build</p>
-    <h2>Core stack</h2>
+    <h2>What I build with</h2>
     <p>
-      What I ship on product-critical systems: durable APIs, SQL-heavy data
-      paths, operational UIs, and production observability.
+      APIs, SQL-heavy data paths, operational UIs, and production observability.
     </p>
   </div>
 
@@ -68,169 +166,57 @@ layout: default
     <div class="stack-groups">
       <article>
         <h3>APIs &amp; services</h3>
-        <p>Design and ship durable HTTP/gRPC APIs with clear contracts, auth, and versioning. Daily drivers: Python, Go, Node.</p>
+        <p>HTTP and gRPC APIs in Python, Go, and Node.js, including auth, versioning, and client integrations.</p>
       </article>
       <article>
         <h3>Product UI</h3>
-        <p>Build TypeScript React and Vue surfaces that stay usable under real workflows — design systems, forms, and ops consoles.</p>
+        <p>Build TypeScript applications with React and Vue for forms, internal tools, and everyday product workflows.</p>
       </article>
       <article>
-        <h3>Data paths</h3>
-        <p>Own SQL-heavy workflows, queues, and idempotent imports. Postgres, Redis, and async jobs under load.</p>
+        <h3>Data &amp; jobs</h3>
+        <p>Build SQL-heavy workflows, queues, and async jobs with Postgres and Redis, digging into database internals when needed.</p>
       </article>
       <article>
         <h3>Run &amp; observe</h3>
-        <p>Deploy, alert, and debug production. AWS, Docker, metrics, logs, and incident loops that close.</p>
+        <p>Deploy, monitor, and debug production systems on AWS and GCP. Metrics, logs, alerts, and incident response.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section experience-section" id="experience">
-  <div class="section-heading">
-    <p class="eyebrow">Experience</p>
-    <h2>Where I’ve shipped real systems</h2>
-    <p>
-      Highlights from healthcare billing, local-first ERP, a car-enthusiast
-      platform, and one of Brazil’s largest ERP products.
-    </p>
-  </div>
-
-  <div class="experience-motion">
-    <svg class="experience-path" viewBox="0 0 120 1000" preserveAspectRatio="none" aria-hidden="true">
-      <path id="career-path" d="M60,0 C112,145 8,245 58,390 C112,545 10,665 62,815 C94,905 28,955 60,1000" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="10 10"/>
-    </svg>
-
-    <ol class="experience-timeline">
-      <li class="experience-entry">
-        <span class="experience-node" aria-hidden="true"></span>
-        <article class="experience-card">
-          <div class="experience-logo">
-            <img src="./images/bling.svg" alt="Bling logo"/>
-          </div>
-          <div class="experience-body">
-            <div class="experience-title-row">
-              <h3>Bling</h3>
-              <span class="experience-years">2020 — 2024</span>
-            </div>
-            <span class="experience-role">Software Engineer</span>
-            <p>
-              Backend and platform work across a large ERP, helping modernize a
-              PHP-heavy stack with Go services and a new API version. Co-owned a Go/gRPC/S3
-              file service serving 100k+ daily requests and supporting a 40TB+ migration.
-            </p>
-          </div>
-        </article>
-      </li>
-
-      <li class="experience-entry">
-        <span class="experience-node" aria-hidden="true"></span>
-        <article class="experience-card">
-          <div class="experience-logo">
-            <img src="./images/gearpoint.svg" alt="Gearpoint logo"/>
-          </div>
-          <div class="experience-body">
-            <div class="experience-title-row">
-              <h3>Gearpoint</h3>
-              <span class="experience-years">2023 — 2024</span>
-            </div>
-            <span class="experience-role">Founding Engineer</span>
-            <p>
-              Built a car enthusiast social/events platform from zero to 2,000+
-              users as founding engineer. Owned Python/Django APIs, Go/Gin
-              media processing, AWS infra, auth, Stripe, observability, and SQS workflows.
-            </p>
-          </div>
-        </article>
-      </li>
-
-      <li class="experience-entry">
-        <span class="experience-node" aria-hidden="true"></span>
-        <article class="experience-card">
-          <div class="experience-logo">
-            <img src="./images/yo-lara.jpg" alt="Yo Lara logo"/>
-          </div>
-          <div class="experience-body">
-            <div class="experience-title-row">
-              <h3>Yo Lara</h3>
-              <span class="experience-years">2024</span>
-            </div>
-            <span class="experience-role">Software Engineer</span>
-            <p>
-              Contributed to a local-first ERP for field-service teams, mainly on
-              frontend flows over SQLite, PostgreSQL, and PowerSync. Built service-order
-              workflows, centralized imports, and accessible React Aria interfaces.
-            </p>
-          </div>
-        </article>
-      </li>
-
-      <li class="experience-entry">
-        <span class="experience-node" aria-hidden="true"></span>
-        <article class="experience-card">
-          <div class="experience-logo">
-            <img src="./images/athelas.png" alt="Athelas logo"/>
-          </div>
-          <div class="experience-body">
-            <div class="experience-title-row">
-              <h3>Athelas</h3>
-              <span class="experience-years">2025 — current</span>
-            </div>
-            <span class="experience-role">Software Engineer</span>
-            <p>
-              Building RCM systems for clinics across eligibility, appointments,
-              patient responsibility, and billing workflows. Owned Charge Master
-              delivery end-to-end, optimized appointment query paths, contributed to
-              rule-engine fixes, and handled production support across critical flows.
-            </p>
-          </div>
-        </article>
-      </li>
-    </ol>
-  </div>
-</section>
-
 <section class="section ventures-section" id="ventures">
   <div class="section-heading">
-    <p class="eyebrow">Selected work</p>
-    <h2>Outside-the-day-job projects</h2>
+    <h2>Outside work</h2>
     <p>
-      Projects where I owned more than code: product shape, operations,
-      commercial details, and the technical path to ship.
+      A side brand I run, and a client site with quotes and contracts.
     </p>
   </div>
 
   <div class="ventures-list">
     <article class="venture-row venture-gheno venture-featured">
-      <div class="venture-logo" aria-hidden="true">
+      <a class="venture-logo" href="https://www.ghenortrs.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Open GHENO website">
         <img src="./images/gheno-rotors.png" alt=""/>
-      </div>
+      </a>
       <div class="venture-panel">
-        <div class="venture-kicker">Side business · Brazilian MTB components</div>
         <h3>GHENO</h3>
         <p>
           A Brazilian performance MTB components brand built around real riding
-          experience and technical product selection. Direct-to-consumer
-          ecommerce and B2B distribution for bike shops, workshops, and
-          resellers.
+          experience.
+          Direct-to-consumer ecommerce and B2B distribution for bike shops and resellers.
         </p>
-        <a href="https://ghenortrs.com.br/" target="_blank" rel="noopener noreferrer">Visit site</a>
       </div>
     </article>
 
-    <article class="venture-row venture-warm">
-      <div class="venture-logo" aria-hidden="true">
+    <article class="venture-row">
+      <a class="venture-logo" href="https://www.thermalaquecimento.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Open Thermal Aquecimento website">
         <img src="./images/thermal-aquecimento.png" alt=""/>
-      </div>
+      </a>
       <div class="venture-panel">
-        <div class="venture-kicker">Client project · Heating services</div>
         <h3>Thermal Aquecimento</h3>
         <p>
-          Heating and solar-energy business focused on residential, commercial,
-          and industrial projects. Supported website work, contracts, and budget
-          quotation flows.
+          Heating and solar-energy business.
+          Built the site and quotation flows, and helped with contracts for a heating and solar company.
         </p>
-        <a href="https://www.thermalaquecimento.com.br/" target="_blank" rel="noopener noreferrer">Visit site</a>
       </div>
     </article>
   </div>
@@ -238,11 +224,9 @@ layout: default
 
 <section class="section education-section" id="education">
   <div class="section-heading">
-    <p class="eyebrow">Education</p>
-    <h2>Statistics, data, and software foundations</h2>
+    <h2>Education</h2>
     <p>
-      A mix of statistical thinking and software foundations: reasoning about
-      data, uncertainty, web systems, and the trade-offs behind working products.
+      Statistics and software foundations that shaped how I think about data, uncertainty, and product trade-offs.
     </p>
   </div>
 
@@ -257,10 +241,10 @@ layout: default
       </div>
       <p class="education-degree">Statistics &amp; Data Science</p>
       <ul class="education-badges">
-        <li>Inference</li>
         <li>Probability</li>
+        <li>Inference</li>
+        <li>Regression</li>
         <li>Data Analysis</li>
-        <li>Experimentation</li>
       </ul>
     </article>
 
@@ -275,9 +259,9 @@ layout: default
       <p class="education-degree">Internet Computing</p>
       <ul class="education-badges">
         <li>Programming</li>
-        <li>Web Systems</li>
         <li>Databases</li>
-        <li>Systems Analysis</li>
+        <li>Web</li>
+        <li>Networks</li>
       </ul>
     </article>
   </div>
@@ -285,7 +269,6 @@ layout: default
 
 <section class="section contact-section" id="contact">
   <div class="section-heading">
-    <p class="eyebrow">Contact</p>
     <h2>Let&rsquo;s talk</h2>
     <p>
       Always happy to talk about work, ideas, or anything worth building.

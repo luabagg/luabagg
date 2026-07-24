@@ -6,8 +6,7 @@
       (function () {
         var registry = {
           catppuccin: { schemes: ["light", "dark"], defaultScheme: "light", labels: { light: "Latte", dark: "Mocha" } },
-          dracula: { schemes: ["dark"], defaultScheme: "dark" },
-          warm: { schemes: ["light", "dark"], defaultScheme: "light" }
+          dracula: { schemes: ["dark"], defaultScheme: "dark" }
         };
         var storedFamily = localStorage.getItem("themeFamily");
         var storedScheme = localStorage.getItem("themeScheme");
@@ -26,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Saira+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f2cc8f" id="meta-theme-color">
+    <meta name="theme-color" content="#e6e9ef" id="meta-theme-color">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
@@ -45,8 +44,8 @@
           <span class="nav-toggle-close" aria-hidden="true">&times;</span>
         </button>
         <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
-          <a href="{{ '/' | relative_url }}#languages">Stack</a>
           <a href="{{ '/' | relative_url }}#experience">Experience</a>
+          <a href="{{ '/' | relative_url }}#languages">Stack</a>
           <a href="{{ '/' | relative_url }}#ventures">Projects</a>
           <a href="{{ '/' | relative_url }}#education">Education</a>
           <a href="{{ '/' | relative_url }}#contact">Contact</a>
@@ -60,7 +59,6 @@
               <div class="theme-family-list" role="listbox" aria-label="Color theme">
                 <button type="button" class="theme-family-option" data-theme-family="catppuccin" role="option">Catppuccin</button>
                 <button type="button" class="theme-family-option" data-theme-family="dracula" role="option">Dracula</button>
-                <button type="button" class="theme-family-option" data-theme-family="warm" role="option">Warm</button>
               </div>
               <div class="theme-menu-divider" role="separator"></div>
               <div class="theme-scheme-row" role="group" aria-label="Color scheme">

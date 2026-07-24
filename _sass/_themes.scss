@@ -30,54 +30,8 @@
   --tech-pill-shadow-hover: rgba(0, 0, 0, 0.55);
 }
 
-:root,
-[data-theme-family="warm"][data-theme-scheme="light"] {
-  --bg: #f8ead0;
-  --surface: #fff4df;
-  --surface-soft: rgba(255, 253, 248, 0.72);
-  --surface-strong: #e9c27f;
-  --text: #3a0e09;
-  --muted: #7a3a2e;
-  --accent: #8c1c13;
-  --accent-soft: #f2cc8f;
-  --dark-red: #5a120b;
-  --media-bg: #e8e4da;
-  --card-line: rgba(221, 214, 200, 0.82);
-  --card-line-soft: rgba(221, 214, 200, 0.55);
-  --shadow: 0 24px 80px rgba(90, 18, 11, 0.14);
-  --lift-shadow: 0 18px 48px rgba(90, 18, 11, 0.1);
-  --body-bg-top: #fcedce;
-  --body-bg-bottom: #f2e0bc;
-  --noise-opacity: 0.1;
-  --theme-color: #f2cc8f;
-  @extend %theme-vars;
-  @extend %theme-vars-light-surfaces;
-}
-
-[data-theme-family="warm"][data-theme-scheme="dark"] {
-  --bg: #2a1410;
-  --surface: #3d1f18;
-  --surface-soft: rgba(61, 31, 24, 0.82);
-  --surface-strong: #6b3a2a;
-  --text: #f8ead0;
-  --muted: #d4a574;
-  --accent: #e85d4c;
-  --accent-soft: #c9a227;
-  --dark-red: #140806;
-  --media-bg: #1f1210;
-  --card-line: rgba(107, 58, 42, 0.65);
-  --card-line-soft: rgba(107, 58, 42, 0.42);
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
-  --lift-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
-  --body-bg-top: #1f1210;
-  --body-bg-bottom: #140a08;
-  --noise-opacity: 0.08;
-  --theme-color: #3d1f18;
-  @extend %theme-vars;
-  @extend %theme-vars-dark-surfaces;
-}
-
 /* Catppuccin Latte — official base/text/red/peach */
+:root,
 [data-theme-family="catppuccin"][data-theme-scheme="light"] {
   --bg: #eff1f5;
   --surface: #e6e9ef;
@@ -100,6 +54,7 @@
   @extend %theme-vars;
   @extend %theme-vars-light-surfaces;
 }
+
 
 /* Catppuccin Mocha — official base/text/pink/peach */
 [data-theme-family="catppuccin"][data-theme-scheme="dark"] {

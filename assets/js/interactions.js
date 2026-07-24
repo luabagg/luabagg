@@ -144,12 +144,6 @@
         defaultScheme: "dark",
         schemeLabels: { dark: "Dracula" },
       },
-      warm: {
-        label: "Warm",
-        schemes: ["light", "dark"],
-        defaultScheme: "light",
-        schemeLabels: { light: "Light", dark: "Dark" },
-      },
     };
 
     const MOBILE_NAV_MAX = 840;
@@ -173,7 +167,7 @@
     };
 
     const syncSchemeToggleUi = (family, scheme) => {
-      const entry = THEME_REGISTRY[family] || THEME_REGISTRY.warm;
+      const entry = THEME_REGISTRY[family] || THEME_REGISTRY.catppuccin;
       const schemeLocked = entry.schemes.length < 2;
       schemeToggle.dataset.scheme = scheme;
       schemeToggle.dataset.themeScheme = scheme;
